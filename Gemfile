@@ -75,8 +75,8 @@ gem 'jquery-datetimepicker-rails'
 
 group :development do
   gem 'spring'
-  gem 'capistrano', '2.15.5'
   gem 'rvm-capistrano'
+  gem 'capistrano', '2.15.5'
   gem 'capistrano-ext'
   gem "capistrano-db-tasks", require: false, github: 'gkopylov/capistrano-db-tasks', ref: 'f3949cd'
   gem 'quiet_assets'

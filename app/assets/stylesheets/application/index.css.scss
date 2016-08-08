@@ -30,3 +30,12 @@
 @import 'style';
 @import 'style.responsive';
 // @import 'layouts/header';
+
+@import "color";
+@import "z_index";
+@import "mixin";
+
+@import "main";
+
+@import "partial/header";
+@import "partial/footer";

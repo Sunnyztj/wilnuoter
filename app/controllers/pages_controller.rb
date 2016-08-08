@@ -9,4 +9,8 @@ class PagesController < ApplicationController
     render params[:id].underscore if lookup_context.template_exists?(params[:id].underscore, "pages", false)
   end
 
+  def index
+
+  end
+
 end
