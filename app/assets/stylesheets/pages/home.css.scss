@@ -1,0 +1,51 @@
+$cta_header_height: 100px;
+$learn_more_link_width: 150px;
+$learn_more_link_height: 40px;
+$learn_more_link_line_height: 25px;
+
+#cta {
+  height: 950px;
+  margin-top: -70px;
+  position: relative;
+  background: no-repeat;
+  background-size: cover;
+  overflow: hidden;
+
+  .container {
+    margin-top: 550px;
+
+    .cta-content {
+      text-align: right;
+      color: $cta_content_font_color;
+
+      .cta-header {
+        height: $cta_header_height;
+        line-height: $cta_header_height;
+        font-size: 2.5em;
+        letter-spacing: 8px;
+
+        .logo {
+          font-size: 1.1em;
+          letter-spacing: 8px;
+        }
+      }
+
+      .cta-main-content {
+        .logo {
+          letter-spacing: 0;
+        }
+      }
+
+      .learn-more-link {
+        width: $learn_more_link_width;
+        height: $learn_more_link_height;
+        line-height: $learn_more_link_line_height;
+        color: $cta_learn_more_link_font_color;
+        background-color: $cta_learn_more_link_background;
+        border: none;
+        margin-top: 50px;
+        border-radius: $learn_more_link_height / 2;
+      }
+    }
+  }
+}
