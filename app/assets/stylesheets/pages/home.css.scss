@@ -53,10 +53,10 @@ $learn_more_link_line_height: 25px;
 
 $welcome_height: 750px;
 $wine_glass_size: 570px;
-$welcome_split_wrapper_height: 40px;
+$split_wrapper_height: 40px;
 $welcome_footer_icon_size: 20px;
 
-#welcome {
+#home_page_welcome {
   height: $welcome_height;
   background-color: $home_page_welcome_background;
   //overflow: hidden;
@@ -86,8 +86,8 @@ $welcome_footer_icon_size: 20px;
     }
 
     #welcome-split-wrapper {
-      height: $welcome_split_wrapper_height;
-      line-height: $welcome_split_wrapper_height;
+      height: $split_wrapper_height;
+      line-height: $split_wrapper_height;
 
       .hr-image-wrapper {
         width: 100px;
@@ -101,7 +101,7 @@ $welcome_footer_icon_size: 20px;
       hr {
         width: 50%;
         margin: -20px auto 0 auto;
-        border-color: $home_page_welcome_hr_color;
+        border-color: $home_page_welcome_split_hr_color;
         position: relative;
         z-index: $split_hr_z_index;
       }
@@ -158,3 +158,122 @@ $welcome_footer_icon_size: 20px;
     }
   }
 }
+
+$home_page_partner_height: 920px;
+
+#home_page_partner {
+  color: $white;
+  height: $home_page_partner_height;
+  background-color: $home_page_partner_background;
+
+  #partner_header_wrapper {
+    padding-top: 110px;
+    padding-bottom: 75px;
+
+    .partner_header_logo {
+      color: $logo_color;
+      font-size: 2.5em;
+      letter-spacing: 6px;
+    }
+
+    .partner_header {
+      font-size: 2.5em;
+      letter-spacing: 6px;
+    }
+
+    #partner-split-wrapper {
+      padding-top: 30px;
+      height: $split_wrapper_height;
+      line-height: $split_wrapper_height;
+
+      .hr-image-wrapper {
+        width: 100px;
+        height: auto;
+        margin: 0 auto;
+        background-color: $home_page_partner_background;
+        position: relative;
+        z-index: $split_wrapper_z_index;
+      }
+
+      hr {
+        width: 30%;
+        margin: -20px auto 0 auto;
+        border-color: $home_page_partner_split_hr_color;
+        position: relative;
+        z-index: $split_hr_z_index;
+      }
+    }
+  }
+
+  #partner-content {
+    padding-top: 65px;
+    border-top: 1px dashed $home_page_partner_split_hr_color;
+    border-bottom: 1px dashed $home_page_partner_split_hr_color;
+
+    .row {
+      padding-bottom: 30px;
+
+      .col-md-3 {
+        padding: 15px 30px 15px 0;
+      }
+
+      .col-md-7 {
+        padding-top: 15px;
+        padding-bottom: 15px;
+        border-left: 1px solid $home_page_partner_split_hr_color;
+
+        .partner-content-header {
+          line-height: 30px;
+        }
+
+        .partner-content-body {
+          line-height: 20px;
+          font-size: 0.8em;
+          color: $home_page_partner_content_body_color;
+        }
+      }
+
+      .col-md-2 {
+        padding-top: 15px;
+        padding-bottom: 15px;
+        border-left: 1px solid $home_page_partner_split_hr_color;
+
+        i {
+          color: $logo_color;
+          line-height: 60px;
+          font-size: 2em;
+        }
+      }
+    }
+  }
+}
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+

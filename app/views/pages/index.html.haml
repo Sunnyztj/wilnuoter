@@ -11,7 +11,7 @@
         始踏上一段精彩的历程。
       %a.btn.btn-default.learn-more-link 了解更多
 
-%section#welcome
+%section#home_page_welcome
   .container
     .col-md-6.wine-glass-wrapper
       %img.wine-glass{:src => image_url('wine-glass.png')}
@@ -22,7 +22,7 @@
         WILNUOTERWINE
       #welcome-split-wrapper
         .hr-image-wrapper
-          %img.split-image{:src => image_url('hr-decoration.png')}
+          %img.split-image{:src => image_url('hr-decoration-on-white.png')}
         %hr
       #welcome-main-content
         %span.logo.logo-black Wilnuoterwine
@@ -52,3 +52,50 @@
             %i.fa.fa-weibo
           .col-md-2
             %i.fa.fa-pinterest-p
+
+%section#home_page_partner
+  .container
+    #partner_header_wrapper.text-center
+      .partner_header_logo.font-pinyon-script
+        WilnuoterWine
+      .partner_header
+        战略合作伙伴
+      #partner-split-wrapper
+        .hr-image-wrapper
+          %img.split-image{:src => image_url('hr-decoration-on-black.png')}
+        %hr
+    #partner-content.col-md-8.col-md-offset-2
+      .row
+        .col-md-3.text-left
+          %img{:src => image_url('lannister.png')}
+        .col-md-7
+          .col-md-11.col-md-offset-1
+            .partner-content-header
+              兰尼斯特
+            .partner-content-body
+              坐落美丽的河畔康铎葡萄园景色优美，占地1186英亩，为了保持有百年历史玫瑰庄园的传统，玫瑰被誉为康铎葡萄园的标志。
+        .col-md-2.text-center
+          %i.fa.fa-picture-o
+      .row
+        .col-md-3.text-left
+          %img{:src => image_url('angove.png')}
+        .col-md-7
+          .col-md-11.col-md-offset-1
+            .partner-content-header
+              安戈瓦酒业
+            .partner-content-body
+              安戈瓦家族酒园是一家历经五代人的南澳家族酒庄，满怀激情， 致力于打造经典的迈拉仑维尔单一葡萄园的葡萄酒，并且甄选一
+        .col-md-2.text-center
+          %i.fa.fa-external-link
+      .row
+        .col-md-3.text-left
+          %img{:src => image_url('penfords.png')}
+        .col-md-7
+          .col-md-11.col-md-offset-1
+            .partner-content-header
+              奔富
+            .partner-content-body
+              奔富（Penfolds）是澳大利亚最著名，也是最大的葡萄酒庄，它被 人们看作是澳大利亚红酒的象征，被称为澳大利亚葡萄酒业
+        .col-md-2.text-center
+          %i.fa.fa-video-camera
+
