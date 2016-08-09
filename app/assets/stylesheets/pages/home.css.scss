@@ -3,6 +3,7 @@ $learn_more_link_width: 150px;
 $learn_more_link_height: 40px;
 $learn_more_link_line_height: 25px;
 
+
 #cta {
   height: 950px;
   margin-top: -70px;
@@ -45,6 +46,114 @@ $learn_more_link_line_height: 25px;
         border: none;
         margin-top: 50px;
         border-radius: $learn_more_link_height / 2;
+      }
+    }
+  }
+}
+
+$welcome_height: 750px;
+$wine_glass_size: 570px;
+$welcome_split_wrapper_height: 40px;
+$welcome_footer_icon_size: 20px;
+
+#welcome {
+  height: $welcome_height;
+  background-color: $home_page_welcome_background;
+  //overflow: hidden;
+
+  .container {
+    //overflow: hidden;
+
+    .wine-glass-wrapper {
+      margin-top: -100px;
+      padding: 0;
+
+      .wine-glass {
+        width: $wine_glass_size;
+        height: $wine_glass_size;
+      }
+    }
+
+    #welcome-header {
+      color: $logo_color;
+      font-size: 2.5em;
+      letter-spacing: 3px;
+      padding-top: 100px;
+    }
+
+    #welcome-logo {
+      font-size: 2.5em;
+    }
+
+    #welcome-split-wrapper {
+      height: $welcome_split_wrapper_height;
+      line-height: $welcome_split_wrapper_height;
+
+      .hr-image-wrapper {
+        width: 100px;
+        height: auto;
+        margin: 0 auto;
+        background-color: $home_page_welcome_background;
+        position: relative;
+        z-index: $split_wrapper_z_index;
+      }
+
+      hr {
+        width: 50%;
+        margin: -20px auto 0 auto;
+        border-color: $home_page_welcome_hr_color;
+        position: relative;
+        z-index: $split_hr_z_index;
+      }
+    }
+
+    #welcome-main-content {
+      padding-top: 20px;
+      color: $light_grey;
+
+      .logo {
+        color: $light_grey !important;
+        letter-spacing: 0;
+      }
+    }
+
+    .learn-more-link {
+      width: $learn_more_link_width;
+      height: $learn_more_link_height;
+      line-height: $learn_more_link_line_height;
+      color: $cta_learn_more_link_font_color;
+      background-color: $cta_learn_more_link_background;
+      border: none;
+      margin-top: 50px;
+      border-radius: $learn_more_link_height / 2;
+    }
+
+    #welcome-footer {
+      padding-top: 80px;
+
+      .col-md-4:not(:first-of-type) {
+        border-left: 1px solid $home_page_welcome_footer_border;
+      }
+
+      .welcome-footer-header {
+        padding-top: 20px;
+        color: $light_grey;
+      }
+
+      .welcome-footer-content {
+        padding-top: 20px;
+        padding-bottom: 20px;
+
+        i {
+          width: $welcome_footer_icon_size;
+          height: $welcome_footer_icon_size;
+          line-height: $welcome_footer_icon_size;
+          font-size: 0.9em;
+          color: $white;
+          display: inline-block;
+          border-radius: $welcome_footer_icon_size / 2;
+          background-color: $black;
+        }
       }
     }
   }
