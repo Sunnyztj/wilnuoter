@@ -1,16 +1,17 @@
 rails_env = ENV['RACK_ENV'] || 'production'
 worker_processes 2
-working_directory '/home/deploy/wilnuoter_wine_rails/current'
+working_directory '/home/deploy/wilnuoter/current'
 
-listen '/tmp/wilnuoter_wine_rails.sock', :backlog => 2048
+listen '/tmp/wilnuoter.sock', :backlog => 2048
+listen 5010, :tcp_nopush => true
 
 timeout 60
-pid "/home/deploy/wilnuoter_wine_rails/shared/pids/wilnuoter_wine_rails.pid"
+pid "/home/deploy/wilnuoter/shared/pids/unicorn.pid"
 preload_app  true
 GC.respond_to?(:copy_on_write_friendly=) and
   GC.copy_on_write_friendly = true
 
-stderr_path '/home/deploy/wilnuoter_wine_rails/shared/log/wilnuoter_wine_rails.log'
+stderr_path '/home/deploy/wilnuoter/shared/log/wilnuoter.log'
 
 before_fork do |server, worker|
   ActiveRecord::Base.connection.disconnect!
