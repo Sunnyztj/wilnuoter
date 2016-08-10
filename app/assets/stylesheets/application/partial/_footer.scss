@@ -16,7 +16,8 @@ $footer_copyright_height: 50px;
 }
 
 #main-footer {
-  height: $main_footer_height;
+  padding-top: 80px;
+  padding-bottom: 80px;
   background-color: $main_footer_background;
   color: $footer_font_color;
 
@@ -24,7 +25,6 @@ $footer_copyright_height: 50px;
     height: $footer_logo_row;
     line-height: $footer_logo_row;
     font-size: 2.2em;
-    margin-top: 80px;
   }
 
   #footer-content {

@@ -15,7 +15,6 @@ header {
 
   #main-menu {
     height: $main_menu_height;
-    line-height: $main_menu_height;
     color: $main_menu_color;
     border-bottom: 1px solid $main_menu_border_color;
     @include inner_border;
