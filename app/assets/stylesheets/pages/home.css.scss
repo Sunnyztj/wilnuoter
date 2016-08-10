@@ -5,15 +5,15 @@ $learn_more_link_line_height: 25px;
 
 
 #cta {
-  height: 950px;
-  margin-top: -70px;
+  height: 100vh;
+  margin-top: -1 * ($logo_section_height + $main_menu_height);
   position: relative;
   background: no-repeat;
   background-size: cover;
   overflow: hidden;
 
   .container {
-    margin-top: 550px;
+    margin-top: 33%;
 
     .cta-content {
       text-align: right;
