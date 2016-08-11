@@ -1,6 +1,61 @@
 /* Large Devices, Wide Screens */
-@media only screen and (max-width : 1200px) {
+@media only screen and (min-width : 1200px) {
+  #main-menu {
+    .nav-header-collapse {
+      text-align: center;
 
+      ul {
+        display: block; text-align:center;
+        float: none;
+
+        li {
+          width: 150px;
+          float: none;
+          display: inline-block;
+
+          a {
+            line-height: 40px;
+            color: $white;
+          }
+
+          a:hover {
+            background-color: transparent;
+            cursor: pointer;
+          }
+        }
+      }
+    }
+  }
+}
+
+/* Large Devices, Wide Screens */
+@media only screen and (max-width : 1200px) {
+  #main-menu {
+    .nav-header-collapse {
+      text-align: center;
+
+      ul {
+        display: block; text-align:center;
+        float: none;
+
+        li {
+          width: 150px;
+          float: none;
+          display: inline-block;
+
+          a {
+            line-height: 40px;
+            color: $white;
+          }
+
+          a:hover {
+            background-color: transparent;
+            cursor: pointer;
+          }
+        }
+      }
+    }
+  }
 }
 
 /* Medium Devices, Desktops */
@@ -12,8 +67,46 @@
 
 /* Small Devices, Tablets */
 @media only screen and (max-width : 768px) {
+  #logo-section {
+    display: none;
+  }
+
   #main-menu {
     line-height: 0;
+    border: none;
+
+    .container {
+      background-color: $white;
+
+      .navbar-toggle {
+        font-size: 1.5em;
+      }
+    }
+
+
+    .nav-header-collapse {
+      text-align: center;
+      border: none;
+
+      ul {
+        margin-top: 0;
+        border: none;
+
+        li {
+          width: 100%;
+          float: none;
+
+          a {
+            color: $black;
+            line-height: 40px;
+          }
+
+          a:hover {
+            cursor: pointer;
+          }
+        }
+      }
+    }
   }
 }
 
