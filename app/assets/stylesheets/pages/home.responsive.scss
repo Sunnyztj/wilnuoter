@@ -1,5 +1,20 @@
 /* Large Devices, Wide Screens */
 @media only screen and (min-width : 1200px) {
+  #cta {
+    .container {
+      margin-top: 55vh;
+
+      .cta-header {
+        font-size: 2.5em;
+        letter-spacing: 8px;
+
+        .logo {
+          letter-spacing: 8px;
+        }
+      }
+    }
+  }
+
   #home_page_welcome {
     .container {
       #welcome-footer {
@@ -24,6 +39,21 @@
 
 /* Large Devices, Wide Screens */
 @media only screen and (max-width : 1200px) {
+  #cta {
+    .container {
+      margin-top: 55vh;
+
+      .cta-header {
+        font-size: 2.5em;
+        letter-spacing: 8px;
+
+        .logo {
+          letter-spacing: 8px;
+        }
+      }
+    }
+  }
+
   #home_page_welcome {
     .container {
       #welcome-footer {
@@ -59,6 +89,21 @@
 
 /* Small Devices, Tablets */
 @media only screen and (max-width : 768px) {
+  #cta {
+    .container {
+      margin-top: 45vh;
+
+      .cta-header {
+        font-size: 1.5em;
+        letter-spacing: 2px;
+
+        .logo {
+          letter-spacing: 2px;
+        }
+      }
+    }
+  }
+
   #home_page_partner {
     #partner-content {
       text-align: center;

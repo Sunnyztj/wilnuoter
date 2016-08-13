@@ -13,7 +13,7 @@ $learn_more_link_line_height: 25px;
   overflow: hidden;
 
   .container {
-    margin-top: 55vh;
+    //margin-top: 55vh;
 
     .cta-content {
       text-align: right;
@@ -22,12 +22,12 @@ $learn_more_link_line_height: 25px;
       .cta-header {
         height: $cta_header_height;
         line-height: $cta_header_height;
-        font-size: 2.5em;
-        letter-spacing: 8px;
+        //font-size: 2.5em;
+        //letter-spacing: 8px;
 
         .logo {
           font-size: 1.1em;
-          letter-spacing: 8px;
+          //letter-spacing: 8px;
         }
       }
 
