@@ -6,15 +6,32 @@ $learn_more_link_line_height: 25px;
 
 #cta {
   height: 100vh;
-  margin-top: -1 * ($logo_section_height + $main_menu_height);
+  margin-top: -210px;
   position: relative;
-  background: no-repeat;
-  background-size: cover;
   overflow: hidden;
 
-  .container {
-    //margin-top: 55vh;
+  .carousel-inner {
+    height: 100%;
 
+    .item {
+      height: 100%;
+
+      .img {
+        height: 100%;
+        background: no-repeat;
+        background-size: cover;
+      }
+
+      .carousel-caption {
+        left: 10%;
+        right: 10%;
+        padding-bottom: 15vh;
+      }
+    }
+  }
+
+
+  .container {
     .cta-content {
       text-align: right;
       color: $cta_content_font_color;

@@ -1,15 +1,77 @@
-%section#cta{:style => 'background-image: url(' + image_url('cta-background.png') + ');'}
-  .container
-    .cta-content
-      .cta-header
-        欢迎来到
-        %span.logo.logo-white WILNUOTERWINE
-      .cta-main-content
-        %span.logo.logo-white Wilnuoterwine
-        致力从南澳各地最佳区域甄选葡萄,打造顶级美酒,而重点<br>
-        则聚焦南阿德莱德产区。您在品尝我们的佳酿时,已经同我们一道共同开<br>
-        始踏上一段精彩的历程。
-      %a.btn.btn-default.learn-more-link 了解更多
+- content_for :stylesheets do
+  -#= stylesheet_link_tag 'utils/owl_carousel/owl.carousel'
+  -#= stylesheet_link_tag 'utils/owl_carousel/owl.theme'
+  -#= stylesheet_link_tag 'utils/owl_carousel/owl.transitions'
+
+- content_for :custom_javascripts do
+  -#= javascript_include_tag 'utils/owl_carousel/owl.carousel'
+  = javascript_include_tag 'pages/home/home'
+
+
+%section#cta.slide{"data-ride" => "carousel"}
+  / Indicators
+  %ol.carousel-indicators
+    %li.active{'data-slide-to' => '0', 'data-target' => '#cta'}
+    %li{'data-slide-to' => '1', 'data-target' => '#cta'}
+  / Wrapper for slides
+  .carousel-inner{:role => 'listbox'}
+    .item.active
+      .img{:style => 'background-image: url(' + image_url('cta-background.png') + ');'}
+      .carousel-caption
+        .container
+          .cta-content
+            .cta-header
+              欢迎来到
+              %span.logo.logo-white WILNUOTERWINE
+            .cta-main-content
+              %span.logo.logo-white Wilnuoterwine
+              致力从南澳各地最佳区域甄选葡萄,打造顶级美酒,而重点<br>
+              则聚焦南阿德莱德产区。您在品尝我们的佳酿时,已经同我们一道共同开<br>
+              始踏上一段精彩的历程。
+            %a.btn.btn-default.learn-more-link 了解更多
+    .item
+      .img{:style => 'background-image: url(' + image_url('cta-background.png') + ');'}
+      .carousel-caption
+        .container
+          .cta-content
+            .cta-header
+              欢迎来到
+              %span.logo.logo-white WILNUOTERWINE
+            .cta-main-content
+              %span.logo.logo-white Wilnuoterwine
+              致力从南澳各地最佳区域甄选葡萄,打造顶级美酒,而重点<br>
+              则聚焦南阿德莱德产区。您在品尝我们的佳酿时,已经同我们一道共同开<br>
+              始踏上一段精彩的历程。
+            %a.btn.btn-default.learn-more-link 了解更多
+
+  / Controls
+  %a.left.carousel-control{'data-slide' => 'prev', :href => '#cta', :role => 'button'}
+    %span.glyphicon.glyphicon-chevron-left{'aria-hidden' => 'true'}
+    %span.sr-only Previous
+  %a.right.carousel-control{'data-slide' => 'next', :href => '#cta', :role => 'button'}
+    %span.glyphicon.glyphicon-chevron-right{'aria-hidden' => 'true'}
+    %span.sr-only Next
+
+
+
+
+-#  .container
+-#    .cta-content
+-#      .cta-header
+-#        欢迎来到
+-#        %span.logo.logo-white WILNUOTERWINE
+-#      .cta-main-content
+-#        %span.logo.logo-white Wilnuoterwine
+-#        致力从南澳各地最佳区域甄选葡萄,打造顶级美酒,而重点<br>
+-#        则聚焦南阿德莱德产区。您在品尝我们的佳酿时,已经同我们一道共同开<br>
+-#        始踏上一段精彩的历程。
+-#      %a.btn.btn-default.learn-more-link 了解更多
+
+
+
+
+
+
 
 %section#home_page_welcome
   .container
