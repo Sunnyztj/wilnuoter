@@ -82,6 +82,15 @@
 @media only screen and (max-width : 992px) {
   #cta {
     .container {
+      .cta-header {
+        font-size: 2.1em;
+        letter-spacing: 4px;
+
+        .logo {
+          letter-spacing: 4px;
+        }
+      }
+
       .cta-content {
         text-align: center;
       }
