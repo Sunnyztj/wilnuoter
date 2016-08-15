@@ -18,17 +18,17 @@
   %meta{:content => "Copyright Brand #{Date.today.year}. All Rights Reserved.", :name => "Copyright"}
 
   %meta{:content => "width=device-width, initial-scale=1", :name => "viewport"}
-  :javascript
-    (function(doc) {
-      viewport = document.querySelector("meta[name=viewport]");
-      if ( navigator.userAgent.match(/iPhone/i) || navigator.userAgent.match(/iPod/i) ) {
-        viewport.setAttribute('content', 'width=device-width, initial-scale=0.5');
-      } else if ( navigator.userAgent.match(/iPad/i) ) {
-        viewport.setAttribute('content', 'width=device-width, initial-scale=0.8');
-      } else if ( navigator.userAgent.match(/Android/i) ) {
-        viewport.setAttribute('content', 'width=900, initial-scale=0.8');
-      }
-    }(document));
+  -#:javascript
+  -#  (function(doc) {
+  -#    viewport = document.querySelector("meta[name=viewport]");
+  -#    if ( navigator.userAgent.match(/iPhone/i) || navigator.userAgent.match(/iPod/i) ) {
+  -#      viewport.setAttribute('content', 'width=device-width, initial-scale=0.5');
+  -#    } else if ( navigator.userAgent.match(/iPad/i) ) {
+  -#      viewport.setAttribute('content', 'width=device-width, initial-scale=0.8');
+  -#    } else if ( navigator.userAgent.match(/Android/i) ) {
+  -#      viewport.setAttribute('content', 'width=900, initial-scale=0.8');
+  -#    }
+  -#  }(document));
 
   %link{:href => "/favicon.ico", :rel => "shortcut icon"}
   %link{href: "/apple-touch-icon.png", rel: "apple-touch-icon"}
