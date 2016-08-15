@@ -1,6 +1,14 @@
 /* Large Devices, Wide Screens */
 @media only screen and (min-width : 1200px) {
   #cta {
+    .carousel-inner {
+      .item {
+        .carousel-caption {
+          padding-bottom: 15vh;
+        }
+      }
+    }
+
     .container {
       width: 100%;
       //margin-top: 40vh;
@@ -41,6 +49,13 @@
 /* Large Devices, Wide Screens */
 @media only screen and (max-width : 1200px) {
   #cta {
+    .carousel-inner {
+      .item {
+        .carousel-caption {
+          padding-bottom: 15vh;
+        }
+      }
+    }
     .container {
       width: 100%;
       //margin-top: 40vh;
@@ -81,6 +96,13 @@
 /* Medium Devices, Desktops */
 @media only screen and (max-width : 992px) {
   #cta {
+    .carousel-inner {
+      .item {
+        .carousel-caption {
+          padding-bottom: 30vh;
+        }
+      }
+    }
     .container {
       .cta-header {
         font-size: 2.1em;
