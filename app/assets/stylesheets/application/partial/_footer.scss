@@ -22,9 +22,11 @@ $footer_copyright_height: 50px;
   color: $footer_font_color;
 
   .logo-row {
+    width: 100%;
     height: $footer_logo_row;
     line-height: $footer_logo_row;
     font-size: 2.2em;
+    overflow: hidden;
   }
 
   #footer-content {
@@ -46,8 +48,10 @@ $footer_copyright_height: 50px;
   }
 
   #footer-copyright {
+    width: 100%;
     height: $footer_copyright_height;
     line-height: $footer_copyright_height;
+    overflow: hidden;
 
     .logo {
       letter-spacing: 0;
