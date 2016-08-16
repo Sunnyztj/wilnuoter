@@ -64,4 +64,5 @@ ActiveRecord::Schema.define(version: 20160816013311) do
     t.datetime "updated_at"
   end
 
+>>>>>>> 65c7fb788d22c05990204982b2c69fdcfdff56f2
 end
