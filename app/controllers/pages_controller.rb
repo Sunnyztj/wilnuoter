@@ -10,7 +10,11 @@ class PagesController < ApplicationController
   end
 
   def index
+    @resp = Hash.new
 
+    home_sliders = HomeSlider.active
+
+    @resp[:home_sliders] = home_sliders
   end
 
 end
