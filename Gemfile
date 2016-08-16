@@ -59,6 +59,9 @@ end
 
 gem 'ckeditor'
 
+# Active admin
+gem 'activeadmin', github: 'activeadmin'
+
 # keep track of views count
 gem 'views_count', '0.0.3'
 
