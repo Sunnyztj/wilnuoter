@@ -57,4 +57,6 @@ Rails.application.routes.draw do
   #   end
 
   root 'pages#index'
+
+  get 'wine_list' => 'products#wine_list'
 end

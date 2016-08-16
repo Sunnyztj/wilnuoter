@@ -14,6 +14,7 @@ class PagesController < ApplicationController
 
     home_sliders = HomeSlider.active
 
+    @resp[:header_type] = 'white'
     @resp[:home_sliders] = home_sliders
   end
 
