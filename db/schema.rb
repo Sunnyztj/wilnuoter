@@ -11,7 +11,7 @@
 #
 # It's strongly recommended that you check this file into your version control system.
 
-ActiveRecord::Schema.define(version: 20160816043827) do
+ActiveRecord::Schema.define(version: 20160816045622) do
 
   # These are extensions that must be enabled in order to support this database
   enable_extension "plpgsql"
@@ -77,6 +77,22 @@ ActiveRecord::Schema.define(version: 20160816043827) do
     t.datetime "created_at"
     t.datetime "updated_at"
   end
+
+  create_table "pages", force: true do |t|
+    t.string   "name"
+    t.text     "body"
+    t.integer  "parent_id"
+    t.string   "url_name"
+    t.string   "banner_image_file_name"
+    t.string   "banner_image_content_type"
+    t.integer  "banner_image_file_size"
+    t.datetime "banner_image_updated_at"
+    t.datetime "created_at"
+    t.datetime "updated_at"
+  end
+
+  add_index "pages", ["parent_id"], name: "index_pages_on_parent_id", using: :btree
+  add_index "pages", ["url_name"], name: "index_pages_on_url_name", using: :btree
 
   create_table "products", force: true do |t|
     t.string   "name"
