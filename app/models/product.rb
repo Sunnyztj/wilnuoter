@@ -21,7 +21,7 @@ class Product < ActiveRecord::Base
     if attributes['friends_price'].present? and attributes['friends_price'] > 0
       attributes['friends_price']
     else
-      retail_price 
+      retail_price
     end
   end
 
