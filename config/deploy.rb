@@ -39,6 +39,6 @@ namespace :deploy do
   task :start do ; end
   task :stop do ; end
   task :restart, :roles => :app, :except => { :no_release => true } do
-    run "cd '/home/deploy/wilnuoter/current' ; bundle exec rake db:seed RAILS_ENV=production"
+    run "cd '/home/deploy/wilnuoter/current' ; bundle exec rake db:migrate RAILS_ENV=production"
   end
 end
