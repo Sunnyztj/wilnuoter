@@ -1,0 +1,14 @@
+#wine-list-cta {
+  margin-top: -268px;
+  position: relative;
+  z-index: $wine_list_cta_z_index;
+
+  .container {
+
+    .cta-image {
+      height: 476px;
+      background: no-repeat;
+      background-size: cover;
+    }
+  }
+}

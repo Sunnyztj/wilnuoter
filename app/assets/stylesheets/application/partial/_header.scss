@@ -1,5 +1,6 @@
 $logo_section_height: 120px;
-$main_menu_height: 70px;
+$main_white_menu_height: 70px;
+$main_black_menu_height: 340px;
 
 header {
   position: relative;
@@ -10,13 +11,31 @@ header {
     line-height: $logo_section_height;
     font-size: 2.5em;
     font-weight: 400;
-    background-color: $white;
+  }
+
+  #main-menu {
+    color: $main_menu_color;
+    border-bottom: 1px solid $main_menu_border_color;
+    @include inner_border;
   }
 }
 
-#main-menu {
-  height: $main_menu_height;
-  color: $main_menu_color;
-  border-bottom: 1px solid $main_menu_border_color;
-  @include inner_border;
+
+
+header.white {
+  #logo-section {
+    background-color: $white;
+  }
+
+  #main-menu {
+    height: $main_white_menu_height;
+  }
+}
+
+header.black {
+  background-color: $black;
+
+  #main-menu {
+    height: $main_black_menu_height;
+  }
 }
