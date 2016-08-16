@@ -11,7 +11,7 @@
 #
 # It's strongly recommended that you check this file into your version control system.
 
-ActiveRecord::Schema.define(version: 20160816013311) do
+ActiveRecord::Schema.define(version: 20160816035632) do
 
   # These are extensions that must be enabled in order to support this database
   enable_extension "plpgsql"
@@ -64,5 +64,38 @@ ActiveRecord::Schema.define(version: 20160816013311) do
     t.datetime "updated_at"
   end
 
->>>>>>> 65c7fb788d22c05990204982b2c69fdcfdff56f2
+  create_table "products", force: true do |t|
+    t.string   "name"
+    t.string   "url_name"
+    t.string   "varietal"
+    t.text     "description"
+    t.string   "status"
+    t.text     "vineyard"
+    t.text     "winemaking"
+    t.string   "colour"
+    t.string   "aroma"
+    t.text     "flavour"
+    t.string   "alcohol"
+    t.string   "country"
+    t.string   "bottle_size"
+    t.decimal  "retail_price",       precision: 10, scale: 2
+    t.decimal  "friends_price",      precision: 10, scale: 2
+    t.string   "vintage"
+    t.string   "review_points"
+    t.string   "review_author"
+    t.text     "review_body"
+    t.integer  "position"
+    t.boolean  "sold_out",                                    default: false
+    t.string   "product_code"
+    t.string   "image_file_name"
+    t.string   "image_content_type"
+    t.integer  "image_file_size"
+    t.datetime "image_updated_at"
+    t.datetime "created_at"
+    t.datetime "updated_at"
+  end
+
+  add_index "products", ["product_code"], name: "index_products_on_product_code", using: :btree
+  add_index "products", ["url_name"], name: "index_products_on_url_name", using: :btree
+
 end
