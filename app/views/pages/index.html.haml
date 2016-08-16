@@ -11,8 +11,9 @@
 %section#cta.slide{"data-ride" => "carousel"}
   / Indicators
   %ol.carousel-indicators
-    %li.active{'data-slide-to' => '0', 'data-target' => '#cta'}
-    %li{'data-slide-to' => '1', 'data-target' => '#cta'}
+    - for i in 0 .. @resp[:home_sliders].length - 1
+      %li{:class => i == 0 ? 'active' : '', 'data-slide-to' => i, 'data-target' => '#cta'}
+
   / Wrapper for slides
   .carousel-inner{:role => 'listbox'}
     - index = 0
