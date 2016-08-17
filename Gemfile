@@ -75,6 +75,9 @@ gem 'unicorn'
 
 gem 'jquery-datetimepicker-rails'
 
+#country select
+gem 'country_select'
+
 
 group :development do
   gem 'spring'

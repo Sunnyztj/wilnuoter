@@ -6,13 +6,8 @@ module PrettyUrl
   end
 
   module ClassMethods
-    def find(id, options = {})
-      if id.is_a?(String)
-        real_id = /(.*\-)?(?<id>\d+)\Z/.match(id)[:id]
-      else
-        real_id = id
-      end
-      super(real_id, options)
+    def find(id)
+      self.find_by_url_name id
     end
   end
 
@@ -22,7 +17,7 @@ module PrettyUrl
 
   private
   def update_url_name
-    self.url_name = "#{name.to_url}-#{id}" if name_changed? and !url_name_changed?    
+    self.url_name = name.parameterize
   end
 
 end
