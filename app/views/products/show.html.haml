@@ -1,3 +1,6 @@
+- content_for :custom_javascripts do
+  = javascript_include_tag 'products/show/wine_image_preview'
+
 #wine-product-cta
   .container
     .cta-image{:style => 'background-image: url(' + image_url('red-wine.jpg') + ')'}
@@ -7,6 +10,14 @@
 %section#wine-details
   .container
     #wine-images
+      .col-md-9#wine-image-large
+        %img.large-image{:src => image_url(@resp[:product].product_images.first.image.url(:large))}
+      .col-md-3#wine-image-preview-wrapper
+        #wine-image-preview-area
+          - @resp[:product].product_images.each do |product_image|
+            .wine-image-preview
+              %img.image-preview{:src => image_url(product_image.image.url(:small))}
+              .wine-image-large-url-keeper.data-keeper{'data-path' => image_url(product_image.image.url(:large)) }
     #wine-name
       = product.name
     #wine-price

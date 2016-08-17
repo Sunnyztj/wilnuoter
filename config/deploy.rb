@@ -21,7 +21,7 @@ set :deploy_via, :remote_cache
 set :db_local_clean, true
 set :locals_rails_env, "development"
 
-set :server_address, "43.229.63.71"
+set :server_address, "wilnuoterwine.tmatt.com.au"
 
 server "43.229.63.71", :app, :web, :db, :primary => true
 
