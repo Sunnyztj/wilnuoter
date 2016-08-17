@@ -18,7 +18,7 @@ ActiveAdmin.register Product do
   form do |f|
     f.inputs "Products" do
       f.input :name
-      # f.input :url_name
+      f.input :description
       f.input :status
       f.input :retail_price
     end
@@ -29,7 +29,7 @@ ActiveAdmin.register Product do
   show do
     attributes_table do
       row :name
-      # row :url_name
+      row :description
       row :status
       row :retail_price
     end
@@ -38,7 +38,7 @@ ActiveAdmin.register Product do
   index do
     column :id
     column :name
-    # column :url_name
+    column :description
     column :status
     column :retail_price
 

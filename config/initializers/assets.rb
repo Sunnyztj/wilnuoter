@@ -19,5 +19,6 @@ Rails.application.config.assets.precompile += ['vendor/*']
 
 
 Rails.application.config.assets.precompile += %w( pages/home/home.js )
+Rails.application.config.assets.precompile += %w( products/show/wine_image_preview.js )
 
 Rails.application.config.assets.precompile += %w( application/index.css )

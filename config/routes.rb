@@ -59,4 +59,5 @@ Rails.application.routes.draw do
   root 'pages#index'
 
   get 'wine_list' => 'products#wine_list'
+  get 'product' => 'products#show'
 end
