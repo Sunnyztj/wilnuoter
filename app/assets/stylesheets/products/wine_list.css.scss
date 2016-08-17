@@ -1,3 +1,5 @@
+$wine_list_cta_image_height: 476px;
+
 #wine-list-cta {
   margin-top: -268px;
   position: relative;
@@ -6,9 +8,44 @@
   .container {
 
     .cta-image {
-      height: 476px;
+      height: $wine_list_cta_image_height;
       background: no-repeat;
       background-size: cover;
+    }
+  }
+}
+
+$product_width: 270px;
+$product_thumbnail_height: 356px;
+
+#wine-list {
+  margin-top: 150px;
+
+  .product {
+    width: $product_width;
+    margin: 50px auto 0 auto;
+
+    .img-thumbnail {
+      width: 100%;
+      height: $product_thumbnail_height;
+    }
+
+    .product-info {
+      padding-top: 30px;
+
+      .product-name {
+        font-family: 'Philosopher', sans-serif;
+        color: $product_thumbnail_name_color;
+        font-size: 1.2em;
+      }
+
+      .product-price {
+        font-family: 'Cinzel', sans-serif;
+        text-align: right;
+        font-size: 1.6em;
+        font-weight: bold;
+        color: $product_thumbnail_price_color;
+      }
     }
   }
 }
