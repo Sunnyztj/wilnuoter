@@ -1,0 +1,56 @@
+#wine-product-cta
+  .container
+    .cta-image{:style => 'background-image: url(' + image_url('red-wine.jpg') + ')'}
+
+- product = @resp[:product]
+
+%section#wine-details
+  .container
+    #wine-images
+    #wine-name
+      = product.name
+    #wine-price
+      $
+      = product.retail_price
+    #wine-description
+      = product.description
+      %hr
+    #wine-label-and-social
+      #wine-labels.col-md-6.col-sm-12
+        %i.fa.fa-tags
+        #labels
+          BLACKBERRY, PLUM, VANILLA, COCOA
+      #share-links.col-md-6.col-sm-12.text-right
+        #share-link-title Share Link:
+        %i.fa.fa-facebook
+        %i.fa.fa-twitter
+        %i.fa.fa-google-plus
+        %i.fa.fa-rss
+    %hr
+
+%section#related-wines
+  .container
+    #related-wines_header_wrapper.text-center
+      .related-wines-header-logo.font-pinyon-script
+        WilnuoterWine
+      .related-wines-header
+        相关产品
+      #related-wines-split-wrapper
+        .hr-image-wrapper
+          %img.split-image{:src => image_url('hr-decoration-on-white.png')}
+        %hr
+
+    #wine-list
+      .container.list.list-without-pagination
+        - @resp[:related_products].each do |related_product|
+          .col-lg-3.col-md-4.col-sm-6
+            .product
+              %img.img-thumbnail{:src => image_url('wine-glass.png'), :alt => ''}
+              .row.product-info
+                .col-xs-7.product-name
+                  = related_product.name
+                .col-xs-5.product-price
+                  $
+                  = related_product.price
+        .row.text-center
+          %a.btn.btn-default.learn-more-link 查看更多
