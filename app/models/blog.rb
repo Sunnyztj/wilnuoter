@@ -1,6 +1,5 @@
 class Blog < ActiveRecord::Base
   include PrettyUrl
-  attr_accessible :body, :name, :url_name, :updated_at
 
   validates :name, :body, presence: true
 
