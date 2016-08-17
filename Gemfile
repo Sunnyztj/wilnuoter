@@ -58,6 +58,7 @@ group :development, :test do
 end
 
 gem 'ckeditor'
+gem 'stringex'
 
 # Active admin
 gem 'activeadmin', github: 'activeadmin'
