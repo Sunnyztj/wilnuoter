@@ -3,6 +3,8 @@ class Product < ActiveRecord::Base
 
   STATUS = %w(draft private public)
 
+
+  has_many :product_images
   validates :status, inclusion: {in: STATUS}
 
   scope :publish, ->{ where(status: 'public') }
