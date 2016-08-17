@@ -2,8 +2,13 @@
   .container
     .cta-image{:style => 'background-image: url(' + image_url('red-wine.jpg') + ')'}
 
+- has_pagination = true
+
+- if @resp[:current_page].to_i == 1 && @resp[:products].length < @resp[:product_count_per_page].to_i
+  - has_pagination = false
+
 #wine-list
-  .container
+  .container.list{:class => has_pagination ? 'list-with-pagination' : 'list-without-pagination'}
     - @resp[:products].each do |product|
       .col-lg-3.col-md-4.col-sm-6
         .product
@@ -14,3 +19,12 @@
             .col-xs-5.product-price
               $
               = product.price
+
+  - if has_pagination
+    #wine-list-pagination.container.text-center
+      .pagination-control.prev
+        = link_to_previous_page @resp[:products], '<i class="fa fa-long-arrow-left"></i>'.html_safe
+      .pages
+        = paginate @resp[:products]
+      .pagination-control.next
+        = link_to_next_page @resp[:products], '<i class="fa fa-long-arrow-right"></i>'.html_safe

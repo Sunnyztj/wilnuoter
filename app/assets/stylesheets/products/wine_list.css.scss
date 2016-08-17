@@ -19,32 +19,110 @@ $product_width: 270px;
 $product_thumbnail_height: 356px;
 
 #wine-list {
-  margin-top: 150px;
+  margin-top: 50px;
 
-  .product {
-    width: $product_width;
-    margin: 50px auto 0 auto;
+  .list {
+    .product {
+      width: $product_width;
+      margin: 50px auto 0 auto;
 
-    .img-thumbnail {
-      width: 100%;
-      height: $product_thumbnail_height;
+      .img-thumbnail {
+        width: 100%;
+        height: $product_thumbnail_height;
+      }
+
+      .product-info {
+        padding: 30px 5px 0 5px;
+
+        .product-name {
+          font-family: 'Philosopher', sans-serif;
+          color: $product_thumbnail_name_color;
+          font-size: 1.2em;
+        }
+
+        .product-price {
+          font-family: 'Cinzel', sans-serif;
+          text-align: right;
+          font-size: 1.6em;
+          font-weight: bold;
+          color: $product_thumbnail_price_color;
+        }
+      }
     }
+  }
 
-    .product-info {
-      padding: 30px 5px 0 5px;
+  .list-with-pagination {
+    padding-bottom: 50px;
+  }
 
-      .product-name {
+  .list-without-pagination {
+    padding-bottom: 100px;
+  }
+}
+
+#wine-list-pagination {
+  padding-bottom: 100px;
+  overflow: hidden;
+  height: 190px;
+  position: relative;
+
+  .pages {
+    display: inline-block;
+    //background-color: grey;
+
+    .pagination {
+      height: 40px;
+      margin: 0;
+
+      .first {
+        display: none;
+      }
+
+      .last {
+        display: none;
+      }
+
+      .next {
+        display: none;
+      }
+
+      .prev {
+        display: none;
+      }
+
+      .page {
+        width: 40px;
+        height: 40px;
+        line-height: 40px;
+        display: inline-block;
         font-family: 'Philosopher', sans-serif;
-        color: $product_thumbnail_name_color;
         font-size: 1.2em;
       }
 
-      .product-price {
-        font-family: 'Cinzel', sans-serif;
-        text-align: right;
-        font-size: 1.6em;
-        font-weight: bold;
-        color: $product_thumbnail_price_color;
+      .page.current {
+        background-color: $logo_color;
+        color: $white;
+      }
+    }
+  }
+
+  a {
+    color: $black;
+  }
+
+  a:visited {
+    color: $black;
+  }
+
+  .pagination-control {
+    //background-color: lightblue;
+    display: inline-block;
+
+    a {
+      line-height: 50px;
+
+      i {
+        font-size: 1.5em;
       }
     }
   }
