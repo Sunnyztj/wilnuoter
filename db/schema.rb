@@ -11,7 +11,7 @@
 #
 # It's strongly recommended that you check this file into your version control system.
 
-ActiveRecord::Schema.define(version: 20160816035632) do
+ActiveRecord::Schema.define(version: 20160816045622) do
 
   # These are extensions that must be enabled in order to support this database
   enable_extension "plpgsql"
@@ -49,6 +49,20 @@ ActiveRecord::Schema.define(version: 20160816035632) do
   add_index "admin_users", ["email"], name: "index_admin_users_on_email", unique: true, using: :btree
   add_index "admin_users", ["reset_password_token"], name: "index_admin_users_on_reset_password_token", unique: true, using: :btree
 
+  create_table "blogs", force: true do |t|
+    t.string   "name"
+    t.text     "body"
+    t.string   "url_name"
+    t.string   "feature_image_file_name"
+    t.string   "feature_image_content_type"
+    t.integer  "feature_image_file_size"
+    t.datetime "feature_image_updated_at"
+    t.datetime "created_at"
+    t.datetime "updated_at"
+  end
+
+  add_index "blogs", ["url_name"], name: "index_blogs_on_url_name", using: :btree
+
   create_table "home_sliders", force: true do |t|
     t.string   "name"
     t.string   "body"
@@ -63,6 +77,22 @@ ActiveRecord::Schema.define(version: 20160816035632) do
     t.datetime "created_at"
     t.datetime "updated_at"
   end
+
+  create_table "pages", force: true do |t|
+    t.string   "name"
+    t.text     "body"
+    t.integer  "parent_id"
+    t.string   "url_name"
+    t.string   "banner_image_file_name"
+    t.string   "banner_image_content_type"
+    t.integer  "banner_image_file_size"
+    t.datetime "banner_image_updated_at"
+    t.datetime "created_at"
+    t.datetime "updated_at"
+  end
+
+  add_index "pages", ["parent_id"], name: "index_pages_on_parent_id", using: :btree
+  add_index "pages", ["url_name"], name: "index_pages_on_url_name", using: :btree
 
   create_table "products", force: true do |t|
     t.string   "name"
