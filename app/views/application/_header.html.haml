@@ -10,7 +10,7 @@
           %li
             %a{:href => "#"} 关于我们
           %li
-            = link_to '精品红酒', wine_list_path
+            = link_to '精品红酒', wine_list_path, {:class => request.env['PATH_INFO'] == wine_list_path ? 'active' : ''}
           %li
             %a{:href => "#"} 活动资讯
           %li

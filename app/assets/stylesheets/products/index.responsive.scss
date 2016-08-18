@@ -1,4 +1,16 @@
 @media only screen and (min-width : 1200px) {
+  #wine-list-cta {
+    margin-top: -268px;
+    position: relative;
+    z-index: $wine_list_cta_z_index;
+
+    .container {
+      .cta-image {
+        height: $wine_list_cta_image_height;
+      }
+    }
+  }
+
   #wine-label-and-social {
     height: 60px;
 
@@ -9,6 +21,18 @@
 }
 
 @media only screen and (max-width : 1200px) {
+  #wine-list-cta {
+    margin-top: -268px;
+    position: relative;
+    z-index: $wine_list_cta_z_index;
+
+    .container {
+      .cta-image {
+        height: $wine_list_cta_image_height;
+      }
+    }
+  }
+
   #wine-label-and-social {
     height: 60px;
 
@@ -27,6 +51,18 @@
 
 /* Small Devices, Tablets */
 @media only screen and (max-width : 768px) {
+  #wine-list-cta {
+    margin-top: 0;
+    position: relative;
+    z-index: $wine_list_cta_sm_z_index;
+
+    .container {
+      .cta-image {
+        height: 300px;
+      }
+    }
+  }
+
   #wine-label-and-social {
     height: 90px;
 

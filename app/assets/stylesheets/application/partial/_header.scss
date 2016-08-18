@@ -34,14 +34,8 @@ header {
     @include inner_border;
     
     .container {
-      ul {
-        li:hover {
-          background: $light-gray;
-
-          a {
-            color: $logo_color;
-          }
-        }
+      a.active {
+        color: $logo_color;
       }
     }
   }
@@ -55,13 +49,25 @@ header.white {
 
   #main-menu {
     height: $main_white_menu_height;
+
+    .container {
+      ul {
+        li:hover {
+          background: $light-gray;
+
+          a {
+            color: $logo_color;
+          }
+
+          a:visited {
+            color: $logo_color;
+          }
+        }
+      }
+    }
   }
 }
 
 header.black {
   background-color: $black;
-
-  #main-menu {
-    height: $main_black_menu_height;
-  }
 }
