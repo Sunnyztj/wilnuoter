@@ -1,0 +1,7 @@
+$('#send-button').fadeOut(500, function() {
+  var result = $('#result');
+  var checkIcon = '<i class="fa fa-check"></i>';
+
+  result.html("<%= @response %>" + checkIcon);
+  result.fadeIn(500);
+});

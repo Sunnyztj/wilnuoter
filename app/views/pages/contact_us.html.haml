@@ -1,0 +1,59 @@
+#wine-list-cta
+  .container
+    .cta-image{:style => 'background-image: url(' + image_url('red-wine.jpg') + ')'}
+
+#contact-info
+  .container.text-center
+    .row
+      .col-sm-4.col-xs-12
+        .phone-icon.contact-icon
+          %i.fa.fa-phone
+        .phone.contact-content
+          (00) 123 456 789
+      .col-sm-4.col-xs-12
+        .address-icon.contact-icon
+          %i.fa.fa-map-marker
+        .address.contact-content
+          81 Gordon Rd, Mandurah SA 5000, Adelaide
+      .col-sm-4.col-xs-12
+        .email-icon.contact-icon
+          %i.fa.fa-envelope
+        .email.contact-content
+          wilnuoter.wine@gmail.com
+    .row
+      %hr
+
+%section#contact-us
+  .container
+    #contact-us-header-wrapper.text-center
+      .contact-us-header-logo.font-pinyon-script
+        WilnuoterWine
+      .contact-us-header
+        联系我们
+      #contact-us-split-wrapper
+        .hr-image-wrapper
+          %img.split-image{:src => image_url('hr-decoration-on-white.png')}
+        %hr
+    .row
+      #contact-us-content.col-sm-8.col-sm-offset-2.text-center
+        致力从南澳各地最佳区域甄选葡萄,打造顶级美酒,而重点则聚焦南阿德莱德产区。您在品尝我们的佳酿时,已经同我们一道共同开始踏上一段精彩的历程。
+    .row
+      #social-list.text-center
+        %i.fa.fa-facebook
+        %i.fa.fa-twitter
+        %i.fa.fa-google-plus
+        %i.fa.fa-pinterest-p
+    .row.contact-form-and-map
+      .col-md-6#contact-form-wrapper
+        = form_tag(send_contact_query_path, method: 'post', id: 'contact-form', remote: true) do
+          .contact-form-header
+            我们很期待您的留言
+          = text_field_tag(:name, nil, {placeholder: '姓名'})
+          = text_field_tag(:email, nil, {placeholder: '邮件地址'})
+          = text_field_tag(:subject, nil, {placeholder: '主题'})
+          %textarea#comment{:name => 'comment', :placeholder => '留言', :rows => '3', :cols => '20'}
+          .row.send-wrapper
+            = button_to('发送留言', nil, {:id => 'send-button', :class => 'btn btn-default learn-more-link', :remote => true})
+            #result
+      .col-md-6#map
+        %iframe{:allowfullscreen => '', :frameborder => '0', :height => '100%', :src => 'https://www.google.com/maps/embed/v1/place?q=place_id:ChIJw12shynPsGoRArGGYxG9qI0&key=AIzaSyDegaBQRyKrjZzKrOiBgvzbCCLSfm8vNHY', :style => 'border:0', :width => '100%'}

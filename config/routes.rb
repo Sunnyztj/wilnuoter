@@ -4,8 +4,10 @@ Rails.application.routes.draw do
 
   root 'pages#index'
 
-  # get 'product/:id' => 'products#show'
   resources :products
-  # get 'wine_list' => 'products#index'
+  resources :pages
 
+  get 'contact' => 'pages#contact_us'
+
+  post 'send_contact_query' => 'pages#send_contact_query'
 end

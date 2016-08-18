@@ -1,0 +1,137 @@
+#contact-info {
+  padding-top: 60px;
+
+  .contact-icon {
+    line-height: 60px;
+    font-size: 1.6em;
+    color: $logo_color;
+  }
+
+  .contact-content {
+    font-family: 'Philosopher', sans-serif;
+    line-height: 20px;
+    font-size: 1.2em;
+  }
+
+  hr {
+    border: none;
+    border-top: 1px solid #e5e5e5;
+    margin-top: 50px;
+    margin-bottom: 0;
+  }
+}
+
+#contact-us {
+  margin-top: 70px;
+
+  .contact-us-header-logo {
+    color: $logo_color;
+    font-size: 2.5em;
+    letter-spacing: 3px;
+  }
+
+  .contact-us-header {
+    font-size: 2.5em;
+  }
+
+  #contact-us-split-wrapper {
+    height: $split_wrapper_height;
+    line-height: $split_wrapper_height;
+    margin-top: 35px;
+
+    .hr-image-wrapper {
+      width: 100px;
+      height: auto;
+      margin: 0 auto;
+      background-color: $white;
+      position: relative;
+      z-index: $split_wrapper_z_index;
+    }
+
+    hr {
+      width: 50%;
+      margin: -20px auto 0 auto;
+      border-color: $home_page_welcome_split_hr_color;
+      position: relative;
+      z-index: $split_hr_z_index;
+    }
+  }
+
+  #contact-us-content {
+    color: #898989;
+    padding-top: 30px;
+  }
+
+  #social-list {
+    color: #898989;
+    padding-top: 30px;
+
+    i {
+      margin: 0 20px;
+    }
+  }
+
+  .row {
+    margin: 0;
+  }
+
+  .contact-form-and-map {
+    margin: 10px 0 70px 0;
+
+    #contact-form-wrapper {
+      margin-top: 40px;
+      height: 450px;
+
+      #contact-form {
+        height: 100%;
+
+        .contact-form-header {
+          font-size: 1.5em;
+        }
+
+        input {
+          width: 100%;
+          height: 50px;
+          margin-top: 15px;
+          border: 0;
+          border-bottom: 1px solid #e5e5e5;
+          outline: 0;
+        }
+
+        textarea {
+          width: 100%;
+          height: 100px;
+          margin-top: 15px;
+          resize: none;
+          word-wrap:break-word;
+          border: 0;
+          border-bottom: 1px solid #e5e5e5;
+          outline: 0;
+        }
+
+        .learn-more-link {
+          width: $learn_more_link_width;
+          height: $learn_more_link_height;
+          line-height: $learn_more_link_line_height;
+          color: $cta_learn_more_link_font_color;
+          background-color: $cta_learn_more_link_background;
+          border: none;
+          margin-top: 50px;
+          border-radius: $learn_more_link_height / 2;
+        }
+
+        #result {
+          margin-top: 50px;
+          display: none;
+          color: green;
+          font-size: 1.5em;
+        }
+      }
+    }
+
+    #map {
+      margin-top: 40px;
+      height: 450px;
+    }
+  }
+}
