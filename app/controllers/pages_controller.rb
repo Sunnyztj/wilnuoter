@@ -18,4 +18,22 @@ class PagesController < ApplicationController
     @resp[:home_sliders] = home_sliders
   end
 
+  def contact_us
+    @resp = Hash.new
+  end
+
+  def send_contact_query
+    @response = '我们已收到您的留言'
+    name = params[:name]
+    subject = params[:subject]
+    email = params[:email]
+    comment = params[:comment]
+
+    respond_to do |format|
+      ContactMailer.contact_email(params[:subject]).deliver
+      format.html
+      format.js
+      format.json
+    end
+  end
 end

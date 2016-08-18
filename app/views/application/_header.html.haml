@@ -14,5 +14,5 @@
           %li
             %a{:href => "#"} 活动资讯
           %li
-            %a{:href => "#"} 联系我们
+            = link_to '联系我们', contact_path, {:class => request.env['PATH_INFO'] == contact_path ? 'active' : ''}
 
