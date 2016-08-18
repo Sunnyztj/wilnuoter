@@ -1,6 +1,6 @@
 %header{:class => @resp[:header_type] == nil ? 'black' : @resp[:header_type]}
   %section#logo-section.text-center.logo
-    WILNUOTERWINE
+    = link_to 'WILNUOTERWINE', {:controller => 'pages', :action => 'index'}
   #main-menu.navbar
     .container
       %button.navbar-toggle{'data-toggle' => 'collapse', 'data-target' => '.nav-header-collapse'}
@@ -10,8 +10,9 @@
           %li
             %a{:href => "#"} 关于我们
           %li
-            %a{:href => "#"} 精品红酒
+            = link_to '精品红酒', wine_list_path
           %li
             %a{:href => "#"} 活动资讯
           %li
             %a{:href => "#"} 联系我们
+
