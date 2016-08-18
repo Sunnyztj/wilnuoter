@@ -11,13 +11,14 @@
   .container
     #wine-images.hidden-sm.hidden-xs
       .col-md-9#wine-image-large
-        %img.large-image{:src => image_url(@resp[:product].product_images.first.image.url(:large))}
+        %span.vertical-helper
+        %img.large-image{:src => image_url(@resp[:product].product_images.first.image.url)}
       .col-md-3#wine-image-preview-wrapper
         #wine-image-preview-area
           - @resp[:product].product_images.each do |product_image|
             .wine-image-preview
               %img.image-preview{:src => image_url(product_image.image.url(:small))}
-              .wine-image-large-url-keeper.data-keeper{'data-path' => image_url(product_image.image.url(:large)) }
+              .wine-image-large-url-keeper.data-keeper{'data-path' => image_url(product_image.image.url) }
 
     #wine-slider.hidden-md.hidden-lg.slide{"data-ride" => "carousel"}
       %ol.carousel-indicators
@@ -31,7 +32,7 @@
           - index += 1
 
           .item{:class => index == 1 ? 'active' : ''}
-            %img{:src => product_image.image.url(:large)}
+            %img{:src => product_image.image.url(:middle)}
 
       / Controls
       %a.left.carousel-control{'data-slide' => 'prev', :href => '#wine-slider', :role => 'button'}
@@ -54,7 +55,7 @@
         %i.fa.fa-tags
         #labels
           BLACKBERRY, PLUM, VANILLA, COCOA
-      #share-links.col-sm-6.col-xs-12.text-right
+      #share-links.col-sm-6.col-xs-12
         #share-link-title Share Link:
         %i.fa.fa-facebook
         %i.fa.fa-twitter

@@ -1,0 +1,51 @@
+@media only screen and (min-width : 1200px) {
+  #wine-label-and-social {
+    height: 60px;
+
+    #share-links {
+      text-align: right;
+    }
+  }
+}
+
+@media only screen and (max-width : 1200px) {
+  #wine-label-and-social {
+    height: 60px;
+
+    #share-links {
+      text-align: right;
+    }
+  }
+}
+
+/* Medium Devices, Desktops */
+@media only screen and (max-width : 992px) {
+  #wine-details {
+    text-align: center;
+  }
+}
+
+/* Small Devices, Tablets */
+@media only screen and (max-width : 768px) {
+  #wine-label-and-social {
+    height: 90px;
+
+    #wine-labels {
+      text-align: center;
+    }
+
+    #share-links {
+      text-align: center;
+    }
+  }
+}
+
+/* Extra Small Devices, Phones */
+@media only screen and (max-width : 480px) {
+
+}
+
+/* Custom, iPhone Retina */
+@media only screen and (max-width : 320px) {
+
+}
