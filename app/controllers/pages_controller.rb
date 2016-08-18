@@ -22,6 +22,10 @@ class PagesController < ApplicationController
     @resp = Hash.new
   end
 
+  def about_us
+    @resp = Hash.new
+  end
+
   def send_contact_query
     @response = '我们已收到您的留言'
     name = params[:name]

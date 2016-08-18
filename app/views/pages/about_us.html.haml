@@ -1,0 +1,87 @@
+#wine-list-cta
+  .container
+    .cta-image{:style => 'background-image: url(' + image_url('red-wine.jpg') + ')'}
+
+%section#welcome.about-us-welcome
+  .container
+    .col-md-6.wine-glass-wrapper.visible-md.hidden-sm.hidden-xs
+      %img.wine-glass{:src => image_url('wine-glass.png')}
+    .col-md-6.welcome-content.text-center
+      #welcome-header.font-pinyon-script
+        Welcome
+      #welcome-logo.logo.logo-black
+        WILNUOTERWINE
+      #welcome-split-wrapper
+        .hr-image-wrapper
+          %img.split-image{:src => image_url('hr-decoration-on-white.png')}
+        %hr
+      #welcome-main-content
+        %span.logo.logo-black Wilnuoterwine
+        致力从南澳各地最佳区域甄选葡萄,打造顶级美酒,而重点则聚焦南阿德莱德产区。您在品尝我们的佳酿时,已经同我们一道共同开始踏上一段精彩的历程。
+  .container
+    #welcome-footer.row.text-center
+      .col-sm-4
+        .welcome-footer-header
+          联系电话
+        .welcome-footer-content
+          (00) 123 456 789
+      .col-sm-4
+        .welcome-footer-header
+          营业时间
+        .welcome-footer-content
+          周一到周五: 8:00 - 10:00
+      .col-sm-4
+        .welcome-footer-header
+          关注我们
+        .welcome-footer-content
+          .col-xs-2.col-xs-offset-2
+            %i.fa.fa-wechat
+          .col-xs-2
+            %i.fa.fa-qq
+          .col-xs-2
+            %i.fa.fa-weibo
+          .col-xs-2
+            %i.fa.fa-pinterest-p
+
+- has_pagination = true
+
+%section#our-team
+  .container.list{:class => has_pagination ? 'list-with-pagination' : 'list-without-pagination'}
+    #our-team-header-wrapper.text-center
+      .our-team-header-logo.font-pinyon-script
+        Wilnuoterwine
+      .our-team-header
+        我们的团队
+      #our-team-split-wrapper
+        .hr-image-wrapper
+          %img.split-image{:src => image_url('hr-decoration-on-white.png')}
+        %hr
+
+    .row#member-list
+      .col-md-4.col-sm-6
+        .member
+          %img.img-thumbnail{:src => image_url('wine-glass.png'), :alt => ''}
+          .row.member-info
+            .member-name
+              Leo Nard
+            %hr
+            .member-role
+              sales executive
+      .col-md-4.col-sm-6
+        .member
+          %img.img-thumbnail{:src => image_url('wine-glass.png'), :alt => ''}
+          .row.member-info
+            .member-name
+              Leo Nard
+            %hr
+            .member-role
+              sales executive
+      .col-md-4.col-sm-6
+        .member
+          %img.img-thumbnail{:src => image_url('wine-glass.png'), :alt => ''}
+          .row.member-info
+            .member-name
+              Leo Nard
+            %hr
+            .member-role
+              sales executive

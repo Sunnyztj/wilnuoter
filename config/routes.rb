@@ -8,6 +8,7 @@ Rails.application.routes.draw do
   resources :pages
 
   get 'contact' => 'pages#contact_us'
+  get 'about' => 'pages#about_us'
 
   post 'send_contact_query' => 'pages#send_contact_query'
 end

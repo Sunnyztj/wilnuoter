@@ -1,0 +1,95 @@
+.about-us-welcome {
+  position: relative;
+  z-index: 130;
+  background-color: $white !important;
+}
+
+
+$member_width: 270px;
+$member_thumbnail_height: 356px;
+
+#our-team {
+  padding-top: 50px;
+
+  .our-team-header-logo {
+    color: $logo_color;
+    font-size: 2.5em;
+    letter-spacing: 3px;
+  }
+
+  .our-team-header {
+    font-size: 2.5em;
+  }
+
+  #our-team-split-wrapper {
+    height: $split_wrapper_height;
+    line-height: $split_wrapper_height;
+    margin-top: 35px;
+
+    .hr-image-wrapper {
+      width: 100px;
+      height: auto;
+      margin: 0 auto;
+      background-color: $white;
+      position: relative;
+      z-index: $split_wrapper_z_index;
+    }
+
+    hr {
+      width: 50%;
+      margin: -20px auto 0 auto;
+      border-color: $home_page_welcome_split_hr_color;
+      position: relative;
+      z-index: $split_hr_z_index;
+    }
+  }
+
+  .list {
+    #member-list {
+      margin-top: 30px;
+
+      .member {
+        width: $member_width;
+        margin: 50px auto 0 auto;
+
+        .img-thumbnail {
+          width: 100%;
+          height: $member_thumbnail_height;
+        }
+
+        .member-info {
+          padding: 15px 30px 0 30px;
+          font-family: 'Philosopher', sans-serif;
+          @include inner_border;
+
+          .member-name {
+            font-size: 1.6em;
+          }
+
+          hr {
+            margin-top: 5px;
+            margin-bottom: 10px;
+            width: 30px;
+            border: none;
+            border-top: 2px solid $logo_color;
+          }
+
+          .member-role {
+            color: #898989;
+            font-style: italic;
+            text-transform: uppercase;
+          }
+        }
+      }
+    }
+
+  }
+
+  .list-with-pagination {
+    padding-bottom: 50px;
+  }
+
+  .list-without-pagination {
+    padding-bottom: 100px;
+  }
+}

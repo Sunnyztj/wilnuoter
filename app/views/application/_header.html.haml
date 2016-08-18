@@ -8,7 +8,7 @@
       .collapse.navbar-collapse.nav-header-collapse
         %ul.nav.navbar-nav
           %li
-            %a{:href => "#"} 关于我们
+            = link_to '关于我们', about_path, {:class => request.env['PATH_INFO'] == about_path ? 'active' : ''}
           %li
             = link_to '精品红酒', products_path, {:class => request.env['PATH_INFO'] == products_path ? 'active' : ''}
           %li
