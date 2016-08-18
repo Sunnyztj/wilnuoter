@@ -23,3 +23,5 @@ Rails.application.config.assets.precompile += %w( polyfills.js admin.js ckeditor
 # Rails.application.config.assets.precompile += %w( products/show/wine_image_preview.js )
 
 # Rails.application.config.assets.precompile += %w( application/index.css )
+
+Rails.application.config.assets.precompile += %w( products/show/wine_image_preview.js )

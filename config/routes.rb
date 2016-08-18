@@ -4,6 +4,8 @@ Rails.application.routes.draw do
 
   root 'pages#index'
 
-  get 'wine_list' => 'products#index'
-  get 'product' => 'products#show'
+  # get 'product/:id' => 'products#show'
+  resources :products
+  # get 'wine_list' => 'products#index'
+
 end
