@@ -11,15 +11,35 @@ header {
     line-height: $logo_section_height;
     font-size: 2.5em;
     font-weight: 400;
+
+    a {
+      color: $logo_color;
+      text-decoration: none;
+    }
+
+    a:visited {
+      color: $logo_color;
+      text-decoration: none;
+    }
+
+    a:hover {
+      color: $logo_color;
+      text-decoration: none;
+    }
   }
 
   #main-menu {
     color: $main_menu_color;
     border-bottom: 1px solid $main_menu_border_color;
     @include inner_border;
+    
+    .container {
+      a.active {
+        color: $logo_color;
+      }
+    }
   }
 }
-
 
 
 header.white {
@@ -29,13 +49,25 @@ header.white {
 
   #main-menu {
     height: $main_white_menu_height;
+
+    .container {
+      ul {
+        li:hover {
+          background: $light-gray;
+
+          a {
+            color: $logo_color;
+          }
+
+          a:visited {
+            color: $logo_color;
+          }
+        }
+      }
+    }
   }
 }
 
 header.black {
   background-color: $black;
-
-  #main-menu {
-    height: $main_black_menu_height;
-  }
 }

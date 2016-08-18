@@ -1,20 +1,5 @@
 $wine_product_cta_image_height: 476px;
 
-#wine-product-cta {
-  margin-top: -268px;
-  position: relative;
-  z-index: $wine_list_cta_z_index;
-
-  .container {
-
-    .cta-image {
-      height: $wine_product_cta_image_height;
-      background: no-repeat;
-      background-size: cover;
-    }
-  }
-}
-
 #wine-details {
   .container {
     color: $product_thumbnail_name_color;

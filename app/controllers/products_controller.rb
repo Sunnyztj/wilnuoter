@@ -1,5 +1,5 @@
 class ProductsController < ApplicationController
-  def wine_list
+  def index
     @resp = Hash.new
 
     product_count_per_page = 12

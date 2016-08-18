@@ -1,5 +1,11 @@
 /* Large Devices, Wide Screens */
 @media only screen and (min-width : 1200px) {
+  header.black {
+    #main-menu {
+      height: $main_black_menu_height;
+    }
+  }
+
   #main-menu {
     .nav-header-collapse {
       text-align: center;
@@ -30,6 +36,12 @@
 
 /* Large Devices, Wide Screens */
 @media only screen and (max-width : 1200px) {
+  header.black {
+    #main-menu {
+      height: $main_black_menu_height;
+    }
+  }
+
   #main-menu {
     .nav-header-collapse {
       text-align: center;
@@ -67,6 +79,13 @@
 
 /* Small Devices, Tablets */
 @media only screen and (max-width : 768px) {
+  header.black {
+    #main-menu {
+      height: 57px;
+      margin-bottom: 0;
+    }
+  }
+
   #logo-section {
     display: none;
   }
