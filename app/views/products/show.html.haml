@@ -79,13 +79,14 @@
       .container.list.list-without-pagination
         - @resp[:related_products].each do |related_product|
           .col-lg-3.col-md-4.col-sm-6
-            .product
-              %img.img-thumbnail{:src => image_url('wine-glass.png'), :alt => ''}
-              .row.product-info
-                .col-xs-7.product-name
-                  = related_product.name
-                .col-xs-5.product-price
-                  $
-                  = related_product.price
+            = link_to product_path(related_product) do
+              .product
+                %img.img-thumbnail{:src => image_url('wine-glass.png'), :alt => ''}
+                .row.product-info
+                  .col-xs-7.product-name
+                    = related_product.name
+                  .col-xs-5.product-price
+                    $
+                    = related_product.price
         .row.text-center
           %a.btn.btn-default.learn-more-link 查看更多

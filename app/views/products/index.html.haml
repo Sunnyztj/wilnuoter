@@ -11,14 +11,15 @@
   .container.list{:class => has_pagination ? 'list-with-pagination' : 'list-without-pagination'}
     - @resp[:products].each do |product|
       .col-lg-3.col-md-4.col-sm-6
-        .product
-          %img.img-thumbnail{:src => image_url('wine-glass.png'), :alt => ''}
-          .row.product-info
-            .col-xs-7.product-name
-              = product.name
-            .col-xs-5.product-price
-              $
-              = product.price
+        = link_to product_path(product) do
+          .product
+            %img.img-thumbnail{:src => image_url('wine-glass.png'), :alt => ''}
+            .row.product-info
+              .col-xs-7.product-name
+                = product.name
+              .col-xs-5.product-price
+                $
+                = product.price
 
   - if has_pagination
     #list-pagination.container.text-center
