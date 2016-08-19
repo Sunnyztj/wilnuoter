@@ -1,0 +1,70 @@
+#blog-list {
+  margin-top: 100px;
+
+  .blog-feature-image {
+    height: 300px;
+    margin-bottom: 50px;
+
+    img {
+      max-height: 100%;
+      max-width: 100%;
+    }
+  }
+
+  .blog-created-time {
+    font-family: 'Philosopher', sans-serif;
+    display: inline-block;
+    height: 70px;
+    //background-color: #7e7e7e;
+    overflow: hidden;
+    position: relative;
+    margin-top: 10px;
+
+
+    .blog-created-month {
+      padding-bottom: 5px;
+      display: inline-block;
+      color: $logo_color;
+      font-size: 1.8em;
+      //background-color: indianred;
+      overflow: hidden;
+      position: relative;
+      z-index: $blog_created_month_z_index;
+    }
+    
+    .blog-created-day {
+      height: 70px;
+      padding-top: 7px;
+      display: inline-block;
+      color: #e5e5e5;
+      font-size: 4em;
+      //background-color: darkgreen;
+      overflow: hidden;
+      position: relative;
+      margin-left: -18px;
+      z-index: $blog_created_day_z_index;
+      @include inner_border;
+      letter-spacing: 6px;
+    }
+  }
+
+  .blog-name {
+    font-family: 'Philosopher', sans-serif;
+    line-height: 50px;
+    font-size: 1.5em;
+  }
+
+  .blog-body {
+    font-family: 'Philosopher', sans-serif;
+    color: #898989;
+  }
+
+  .blog-continue {
+    margin-top: 20px;
+    color: #898989;
+
+    span {
+      font-family: 'Philosopher', sans-serif;
+    }
+  }
+}

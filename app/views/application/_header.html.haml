@@ -12,7 +12,7 @@
           %li
             = link_to '精品红酒', products_path, {:class => request.env['PATH_INFO'] == products_path ? 'active' : ''}
           %li
-            %a{:href => "#"} 活动资讯
+            = link_to '活动资讯', blogs_path, {:class => request.env['PATH_INFO'] == blogs_path ? 'active' : ''}
           %li
             = link_to '联系我们', contact_path, {:class => request.env['PATH_INFO'] == contact_path ? 'active' : ''}
 

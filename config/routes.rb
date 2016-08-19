@@ -6,6 +6,7 @@ Rails.application.routes.draw do
 
   resources :products
   resources :pages
+  resources :blogs
 
   get 'contact' => 'pages#contact_us'
   get 'about' => 'pages#about_us'
