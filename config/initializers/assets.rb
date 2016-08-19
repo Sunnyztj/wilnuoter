@@ -9,7 +9,7 @@ Rails.application.config.assets.version = '1.0'
 
 
 # Rails.application.config.assets.precompile += %w( polyfills.js admin.js search.js)
-Rails.application.config.assets.precompile += %w( polyfills.js admin.js ckeditor/*   )
+Rails.application.config.assets.precompile += %w( polyfills.js )
 # Rails.application.config.assets.precompile += ['vendor/*']
 
 # # Rails.application.config.assets.precompile += %w( utils/owl_carousel/owl.carousel.css )
@@ -18,10 +18,10 @@ Rails.application.config.assets.precompile += %w( polyfills.js admin.js ckeditor
 
 # # Rails.application.config.assets.precompile += %w( utils/owl_carousel/owl.carousel.min.js )
 
-Rails.application.config.assets.precompile += %w( application/index.css )
-Rails.application.config.assets.precompile += %w( pages/home/home.js )
+# Rails.application.config.assets.precompile += %w( application/index.css )
+# Rails.application.config.assets.precompile += %w( pages/home/home.js )
 # Rails.application.config.assets.precompile += %w( products/show/wine_image_preview.js )
 
 # Rails.application.config.assets.precompile += %w( application/index.css )
 
-Rails.application.config.assets.precompile += %w( products/show/wine_image_preview.js )
+# Rails.application.config.assets.precompile += %w( products/show/wine_image_preview.js )
