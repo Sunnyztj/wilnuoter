@@ -28,6 +28,7 @@ server "43.229.63.71", :app, :web, :db, :primary => true
 # if you want to clean up old releases on each deploy uncomment this:
 after "deploy:restart", "deploy:cleanup"
 after 'deploy:restart', 'unicorn:restart'
+after "deploy", "assets:precompile"
 
 after "bundle:install", :roles => :web do
   run "ln -s #{shared_path}/config/database.yml #{release_path}/config/database.yml"
