@@ -32,3 +32,14 @@
 .data-keeper {
   display: none;
 }
+
+.highlight-on-hover:hover {
+  cursor: pointer;
+  background-color: #f2f2f2;
+}
+
+.vertical-helper {
+  display: inline-block;
+  height: 100%;
+  vertical-align: middle;
+}

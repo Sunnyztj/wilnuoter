@@ -1,11 +1,13 @@
 - content_for :custom_javascripts do
   = javascript_include_tag 'products/show/wine_image_preview'
 
+- product = @resp[:product]
+
 #wine-list-cta
   .container
     .cta-image{:style => 'background-image: url(' + image_url('red-wine.jpg') + ')'}
-
-- product = @resp[:product]
+      .cta-header.text-center
+        = product.name
 
 %section#wine-details
   .container

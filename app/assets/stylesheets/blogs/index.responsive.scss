@@ -1,23 +1,59 @@
 @media only screen and (min-width : 992px) {
   #blog-list {
-    .blog-feature-image {
-      margin-bottom: 50px;
-    }
+    margin-top: 100px;
 
-    .blog-content {
-      text-align: left;
+    .blog {
+      padding: 25px 0;
+
+      .blog-feature-image {
+        height: 300px;
+      }
+
+      .blog-content {
+        text-align: left;
+      }
     }
   }
 }
 
 @media only screen and (max-width : 992px) {
   #blog-list {
-    .blog-feature-image {
-      margin-bottom: 10px;
-    }
+    margin-top: 100px;
 
-    .blog-content {
-      text-align: center;
+    .blog {
+      padding: 25px 0;
+
+      .blog-created-time-xs {
+        color: #898989;
+
+        i {
+          margin-right: 15px;
+        }
+
+        span {
+          font-family: 'Philosopher', sans-serif;
+        }
+      }
+
+      .blog-feature-image {
+        height: 300px;
+      }
+
+      .blog-content {
+        text-align: center;
+      }
+    }
+  }
+}
+
+@media only screen and (max-width : 768px) {
+  #blog-list {
+    margin-top: 30px;
+
+    .blog {
+      .blog-feature-image {
+        height: 200px;
+      }
     }
   }
 }

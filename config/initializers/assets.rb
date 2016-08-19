@@ -18,7 +18,7 @@ Rails.application.config.assets.precompile += %w( polyfills.js admin.js ckeditor
 
 # # Rails.application.config.assets.precompile += %w( utils/owl_carousel/owl.carousel.min.js )
 
-
+Rails.application.config.assets.precompile += %w( application/index.css )
 Rails.application.config.assets.precompile += %w( pages/home/home.js )
 # Rails.application.config.assets.precompile += %w( products/show/wine_image_preview.js )
 
