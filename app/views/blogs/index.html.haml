@@ -13,8 +13,9 @@
   .container.list{:class => has_pagination ? 'list-with-pagination' : 'list-without-pagination'}
 
     - @resp[:blogs].each do |blog|
-      .highlight-on-hover.blog
-        .col-lg-4.col-lg-offset-1.blog-feature-image.col-md-5
+      .row.highlight-on-hover.blog
+        .col-lg-1.visible-lg
+        .col-lg-4.blog-feature-image.col-md-5
           %span.vertical-helper
           %img{:src => image_url(blog.feature_image.url)}
         .col-lg-6.col-md-7.blog-content
