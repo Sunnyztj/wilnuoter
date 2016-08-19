@@ -1,2 +1,13 @@
-gmail_username: 'email@gmail.com'
-gmail_password: 'password'
+default: &default
+  gmail_username: 'email@gmail.com'
+  gmail_password: 'password'
+
+
+development:
+  <<: *default
+
+test:
+  <<: *default
+
+production:
+  <<: *default
