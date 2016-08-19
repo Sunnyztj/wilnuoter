@@ -1,24 +1,31 @@
 /* Large Devices, Wide Screens */
 @media only screen and (min-width : 1200px) {
   #cta {
+    .carousel-indicators {
+      padding-right: 15px;
+      text-align: right;
+      left: auto;
+      right: 10%;
+    }
+
     .carousel-inner {
       .item {
         .carousel-caption {
           padding-bottom: 15vh;
         }
       }
-    }
 
-    .container {
-      width: 100%;
-      //margin-top: 40vh;
+      .container {
+        width: 100%;
+        //margin-top: 40vh;
 
-      .cta-header {
-        font-size: 2.5em;
-        letter-spacing: 8px;
-
-        .logo {
+        .cta-header {
+          font-size: 2.5em;
           letter-spacing: 8px;
+
+          .logo {
+            letter-spacing: 8px;
+          }
         }
       }
     }
@@ -49,6 +56,12 @@
 /* Large Devices, Wide Screens */
 @media only screen and (max-width : 1200px) {
   #cta {
+    .carousel-indicators {
+      padding-right: 15px;
+      text-align: right;
+      left: auto;
+      right: 10%;
+    }
     .carousel-inner {
       .item {
         .carousel-caption {
@@ -96,6 +109,12 @@
 /* Medium Devices, Desktops */
 @media only screen and (max-width : 992px) {
   #cta {
+    .carousel-indicators {
+      padding-right: 0;
+      left: 50%;
+      right: auto;
+      text-align: center;
+    }
     .carousel-inner {
       .item {
         .carousel-caption {

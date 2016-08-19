@@ -1,15 +1,6 @@
-- content_for :stylesheets do
-  -#= stylesheet_link_tag 'utils/owl_carousel/owl.carousel'
-  -#= stylesheet_link_tag 'utils/owl_carousel/owl.theme'
-  -#= stylesheet_link_tag 'utils/owl_carousel/owl.transitions'
-
-- content_for :custom_javascripts do
-  -#= javascript_include_tag 'utils/owl_carousel/owl.carousel'
-  = javascript_include_tag 'pages/home/home'
-
-
 %section#cta.slide{"data-ride" => "carousel"}
   / Indicators
+
   %ol.carousel-indicators
     - for i in 0 .. @resp[:home_sliders].length - 1
       %li{:class => i == 0 ? 'active' : '', 'data-slide-to' => i, 'data-target' => '#cta'}
@@ -45,7 +36,7 @@
 %section#welcome
   .container
     .col-md-6.wine-glass-wrapper.visible-md.hidden-sm.hidden-xs
-      %img.wine-glass{:src => image_url('wine-glass.png')}
+      %img.wine-glass{:src => image_url('wine-glass-2.jpg')}
     .col-md-6.welcome-content.text-center
       #welcome-header.font-pinyon-script
         Welcome
