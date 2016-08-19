@@ -12,9 +12,9 @@
 
     - @resp[:blogs].each do |blog|
       .row
-        .col-md-4.col-md-offset-1.blog-feature-image
+        .col-lg-4.col-lg-offset-1.blog-feature-image.col-md-5
           %img{:src => image_url(blog.feature_image.url)}
-        .col-md-6
+        .col-lg-6.col-md-7.blog-content
           .blog-created-time
             .blog-created-month
               = blog.created_at.strftime('%^b')

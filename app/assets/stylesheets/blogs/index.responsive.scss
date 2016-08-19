@@ -1,0 +1,23 @@
+@media only screen and (min-width : 992px) {
+  #blog-list {
+    .blog-feature-image {
+      margin-bottom: 50px;
+    }
+
+    .blog-content {
+      text-align: left;
+    }
+  }
+}
+
+@media only screen and (max-width : 992px) {
+  #blog-list {
+    .blog-feature-image {
+      margin-bottom: 10px;
+    }
+
+    .blog-content {
+      text-align: center;
+    }
+  }
+}
