@@ -6,6 +6,11 @@ $wine_list_cta_image_height: 476px;
     .cta-image {
       background: no-repeat;
       background-size: cover;
+      overflow: hidden;
+
+      .cta-header {
+        color: $white;
+      }
     }
   }
 }

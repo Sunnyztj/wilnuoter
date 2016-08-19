@@ -4,12 +4,6 @@ $wine_product_cta_image_height: 476px;
   .container {
     color: $product_thumbnail_name_color;
 
-    .vertical-helper {
-      display: inline-block;
-      height: 100%;
-      vertical-align: middle;
-    }
-
     img {
       display: inline;
       max-width:100%;
@@ -30,7 +24,8 @@ $wine_product_cta_image_height: 476px;
       #wine-image-large {
         height: 100%;
         white-space: nowrap;
-        text-align: center; margin: 1em 0;
+        text-align: center;
+        margin: 1em 0;
       }
 
       #wine-image-preview-wrapper {

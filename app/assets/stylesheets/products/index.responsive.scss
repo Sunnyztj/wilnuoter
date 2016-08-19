@@ -8,6 +8,11 @@
       .cta-image {
         height: $wine_list_cta_image_height;
       }
+
+      .cta-header {
+        font-size: 3em;
+        margin-top: 150px;
+      }
     }
   }
 
@@ -29,6 +34,11 @@
     .container {
       .cta-image {
         height: $wine_list_cta_image_height;
+      }
+
+      .cta-header {
+        font-size: 3em;
+        margin-top: 150px;
       }
     }
   }
@@ -59,6 +69,11 @@
     .container {
       .cta-image {
         height: 300px;
+      }
+
+      .cta-header {
+        font-size: 2em;
+        margin-top: 80px;
       }
     }
   }
