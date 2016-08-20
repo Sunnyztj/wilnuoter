@@ -1,6 +1,6 @@
 ActiveAdmin.register Staff do
 
-  permit_params :image, :name, :position
+  permit_params :image, :name, :position, :role
 
   form do |f|
     f.inputs "Details" do
