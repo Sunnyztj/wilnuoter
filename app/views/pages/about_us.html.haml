@@ -62,7 +62,7 @@
     .row#member-list
       - @resp[:staffs].each do |staff|
         .col-md-4.col-sm-6
-          .member
+          .staff
             %img.img-thumbnail{:src => image_url(staff.image.url(:small)), :alt => ''}
             .row.member-info
               .member-name
