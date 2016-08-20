@@ -24,6 +24,10 @@ class PagesController < ApplicationController
 
   def about_us
     @resp = Hash.new
+
+    staffs = Staff.load_by_position
+
+    @resp[:staffs] = staffs
   end
 
   def send_contact_query

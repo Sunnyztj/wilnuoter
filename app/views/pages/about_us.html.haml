@@ -60,30 +60,13 @@
         %hr
 
     .row#member-list
-      .col-md-4.col-sm-6
-        .member
-          %img.img-thumbnail{:src => image_url('wine-glass.png'), :alt => ''}
-          .row.member-info
-            .member-name
-              Leo Nard
-            %hr
-            .member-role
-              sales executive
-      .col-md-4.col-sm-6
-        .member
-          %img.img-thumbnail{:src => image_url('wine-glass.png'), :alt => ''}
-          .row.member-info
-            .member-name
-              Leo Nard
-            %hr
-            .member-role
-              sales executive
-      .col-md-4.col-sm-6
-        .member
-          %img.img-thumbnail{:src => image_url('wine-glass.png'), :alt => ''}
-          .row.member-info
-            .member-name
-              Leo Nard
-            %hr
-            .member-role
-              sales executive
+      - @resp[:staffs].each do |staff|
+        .col-md-4.col-sm-6
+          .member
+            %img.img-thumbnail{:src => image_url(staff.image.url(:small)), :alt => ''}
+            .row.member-info
+              .member-name
+                = staff.name
+              %hr
+              .member-role
+                = staff.role
