@@ -1,0 +1,92 @@
+.blur-image {
+  opacity: 2;
+  @include blur_image(20px);
+}
+
+#blog-details {
+  margin-bottom: 100px;
+
+  .row {
+    margin: 0;
+  }
+
+  .blog-feature-image {
+    text-align: center;
+    white-space: nowrap;
+    margin: 1em 0;
+
+    img {
+      display: inline;
+      max-width:100%;
+      max-height:100%;
+      margin: 0 auto;
+      vertical-align: middle;
+    }
+  }
+
+  .blog-content {
+    min-height: 100px;
+
+    .blog-created-time {
+      font-family: 'Philosopher', sans-serif;
+      display: inline-block;
+      height: 70px;
+      //background-color: #7e7e7e;
+      overflow: hidden;
+      position: relative;
+      margin-top: 20px;
+
+      .blog-created-month {
+        padding-bottom: 5px;
+        display: inline-block;
+        color: $logo_color;
+        font-size: 1.8em;
+        //background-color: indianred;
+        overflow: hidden;
+        position: relative;
+        z-index: $blog_created_month_z_index;
+      }
+
+      .blog-created-day {
+        height: 70px;
+        padding-top: 7px;
+        display: inline-block;
+        color: #e5e5e5;
+        font-size: 4em;
+        //background-color: darkgreen;
+        overflow: hidden;
+        position: relative;
+        margin-left: -18px;
+        z-index: $blog_created_day_z_index;
+        @include inner_border;
+        letter-spacing: 6px;
+      }
+    }
+
+    .blog-created-time-xs {
+      margin-top: 15px;
+      margin-bottom: 15px;
+    }
+
+    .blog-name {
+      font-family: 'Philosopher', sans-serif;
+      line-height: 50px;
+      font-size: 1.5em;
+    }
+
+    .blog-body {
+      font-family: 'Philosopher', sans-serif;
+      color: #898989;
+      padding-top: 15px;
+    }
+
+    .blog-continue {
+      margin-top: 20px;
+      color: #898989;
+
+      span {
+        font-family: 'Philosopher', sans-serif;
+      }
+    }
+  }
+}

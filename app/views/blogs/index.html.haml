@@ -13,28 +13,29 @@
   .container.list{:class => has_pagination ? 'list-with-pagination' : 'list-without-pagination'}
 
     - @resp[:blogs].each do |blog|
-      .row.highlight-on-hover.blog
-        .col-lg-1.visible-lg
-        .col-lg-4.blog-feature-image.col-md-5
-          %span.vertical-helper
-          %img{:src => image_url(blog.feature_image.url)}
-        .col-lg-6.col-md-7.blog-content
-          .blog-created-time.hidden-xs
-            .blog-created-month
-              = blog.created_at.strftime('%^b')
-            .blog-created-day
-              = blog.created_at.strftime('%d')
-          .blog-created-time-xs.visible-xs
-            %i.fa.fa-calendar
-            %span
-              = blog.created_at.strftime('%^b %d')
-          .blog-name
-            = blog.name
-          .blog-body
-            = blog.body
-          .blog-continue
-            %span continue
-            %i.fa.fa-long-arrow-right
+      = link_to blog_path(blog) do
+        .row.highlight-on-hover.blog
+          .col-lg-1.visible-lg
+          .col-lg-4.blog-feature-image.col-md-5
+            %span.vertical-helper
+            %img{:src => image_url(blog.feature_image.url)}
+          .col-lg-6.col-md-7.blog-content
+            .blog-created-time.hidden-xs
+              .blog-created-month
+                = blog.created_at.strftime('%^b')
+              .blog-created-day
+                = blog.created_at.strftime('%d')
+            .blog-created-time-xs.visible-xs
+              %i.fa.fa-calendar
+              %span
+                = blog.created_at.strftime('%^b %d')
+            .blog-name
+              = blog.name
+            .blog-body
+              = blog.body
+            .blog-continue
+              %span continue
+              %i.fa.fa-long-arrow-right
 
   - if has_pagination
     #list-pagination.container.text-center

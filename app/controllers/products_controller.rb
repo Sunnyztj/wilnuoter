@@ -5,7 +5,7 @@ class ProductsController < ApplicationController
     product_count_per_page = 12
     page = params[:page] == nil ? 1 : params[:page]
 
-    products = Product.drafted.page(page).per(product_count_per_page)
+    products = Product.publish.page(page).per(product_count_per_page)
 
     @resp[:products] = products
     @resp[:current_page] = page
@@ -15,7 +15,7 @@ class ProductsController < ApplicationController
   def show
     @resp = Hash.new
 
-    product = Product.load_by_url_name(params[:id]).first
+    product = Product.find(params[:id])
 
     @resp[:product] = product
     @resp[:related_products] = Product.all.page(1).per(4)
