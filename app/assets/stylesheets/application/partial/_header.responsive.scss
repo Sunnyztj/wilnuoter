@@ -7,6 +7,8 @@
   }
 
   #main-menu {
+    border-bottom: 1px solid $main_menu_border_color;
+
     .nav-header-collapse {
       text-align: center;
 
@@ -43,6 +45,7 @@
   }
 
   #main-menu {
+    border-bottom: 1px solid $main_menu_border_color;
     .nav-header-collapse {
       text-align: center;
 
@@ -93,6 +96,7 @@
   #main-menu {
     line-height: 0;
     border: none;
+    border-bottom: none;
 
     .container {
       background-color: $white;

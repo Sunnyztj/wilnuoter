@@ -1,0 +1,25 @@
+- blog = @resp[:blog]
+
+#wine-list-cta
+  .container
+    .cta-image.blur-image{:style => 'background-image: url(' + blog.feature_image.url + ')'}
+
+#blog-details.text-center
+  .container
+    .row.blog-feature-image
+      %span.vertical-helper
+      %img{:src => image_url(blog.feature_image.url)}
+    .row.blog-content
+      .blog-created-time.hidden-xs
+        .blog-created-month
+          = blog.created_at.strftime('%^b')
+        .blog-created-day
+          = blog.created_at.strftime('%d')
+      .blog-created-time-xs.visible-xs
+        %i.fa.fa-calendar
+        %span
+          = blog.created_at.strftime('%^b %d')
+      .blog-name
+        = blog.name
+      .blog-body.col-md-10.col-md-offset-1
+        = blog.body

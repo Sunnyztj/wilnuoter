@@ -11,38 +11,39 @@
 
 %section#wine-details
   .container
-    #wine-images.hidden-sm.hidden-xs
-      .col-md-9#wine-image-large
-        %span.vertical-helper
-        %img.large-image{:src => image_url(@resp[:product].product_images.first.image.url)}
-      .col-md-3#wine-image-preview-wrapper
-        #wine-image-preview-area
-          - @resp[:product].product_images.each do |product_image|
-            .wine-image-preview
-              %img.image-preview{:src => image_url(product_image.image.url(:small))}
-              .wine-image-large-url-keeper.data-keeper{'data-path' => image_url(product_image.image.url) }
+    - if product.product_images.length > 0
+      #wine-images.hidden-sm.hidden-xs
+        .col-md-9#wine-image-large
+          %span.vertical-helper
+          %img.large-image{:src => image_url(product.product_images.first.image.url)}
+        .col-md-3#wine-image-preview-wrapper
+          #wine-image-preview-area
+            - product.product_images.each do |product_image|
+              .wine-image-preview
+                %img.image-preview{:src => image_url(product_image.image.url(:small))}
+                .wine-image-large-url-keeper.data-keeper{'data-path' => image_url(product_image.image.url) }
 
-    #wine-slider.hidden-md.hidden-lg.slide{"data-ride" => "carousel"}
-      %ol.carousel-indicators
-        - for i in 0 .. @resp[:product].product_images.length - 1
-          %li{:class => i == 0 ? 'active' : '', 'data-slide-to' => i, 'data-target' => '#wine-slider'}
+      #wine-slider.hidden-md.hidden-lg.slide{"data-ride" => "carousel"}
+        %ol.carousel-indicators
+          - for i in 0 .. product.product_images.length - 1
+            %li{:class => i == 0 ? 'active' : '', 'data-slide-to' => i, 'data-target' => '#wine-slider'}
 
-      / Wrapper for slides
-      .carousel-inner{:role => 'listbox'}
-        - index = 0
-        - @resp[:product].product_images.each do |product_image|
-          - index += 1
+        / Wrapper for slides
+        .carousel-inner{:role => 'listbox'}
+          - index = 0
+          - product.product_images.each do |product_image|
+            - index += 1
 
-          .item{:class => index == 1 ? 'active' : ''}
-            %img{:src => product_image.image.url(:middle)}
+            .item{:class => index == 1 ? 'active' : ''}
+              %img{:src => product_image.image.url(:middle)}
 
-      / Controls
-      %a.left.carousel-control{'data-slide' => 'prev', :href => '#wine-slider', :role => 'button'}
-        %span.glyphicon.glyphicon-chevron-left{'aria-hidden' => 'true'}
-        %span.sr-only Previous
-      %a.right.carousel-control{'data-slide' => 'next', :href => '#wine-slider', :role => 'button'}
-        %span.glyphicon.glyphicon-chevron-right{'aria-hidden' => 'true'}
-        %span.sr-only Next
+        / Controls
+        %a.left.carousel-control{'data-slide' => 'prev', :href => '#wine-slider', :role => 'button'}
+          %span.glyphicon.glyphicon-chevron-left{'aria-hidden' => 'true'}
+          %span.sr-only Previous
+        %a.right.carousel-control{'data-slide' => 'next', :href => '#wine-slider', :role => 'button'}
+          %span.glyphicon.glyphicon-chevron-right{'aria-hidden' => 'true'}
+          %span.sr-only Next
 
     #wine-name
       = product.name
@@ -79,16 +80,17 @@
 
     #wine-list
       .container.list.list-without-pagination
-        - @resp[:related_products].each do |related_product|
-          .col-lg-3.col-md-4.col-sm-6
-            = link_to product_path(related_product) do
-              .product
-                %img.img-thumbnail{:src => image_url('wine-glass.png'), :alt => ''}
-                .row.product-info
-                  .col-xs-7.product-name
-                    = related_product.name
-                  .col-xs-5.product-price
-                    $
-                    = related_product.price
+        .row
+          - @resp[:related_products].each do |related_product|
+            .col-lg-3.col-md-4.col-sm-6
+              = link_to product_path(related_product) do
+                .product
+                  %img.img-thumbnail{:src => image_url(related_product.image.url(:small)), :alt => ''}
+                  .row.product-info
+                    .col-xs-7.product-name
+                      = related_product.name
+                    .col-xs-5.product-price
+                      $
+                      = related_product.price
         .row.text-center
           %a.btn.btn-default.learn-more-link 查看更多

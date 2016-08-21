@@ -30,7 +30,6 @@ header {
 
   #main-menu {
     color: $main_menu_color;
-    border-bottom: 1px solid $main_menu_border_color;
     @include inner_border;
     
     .container {

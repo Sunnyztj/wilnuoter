@@ -19,6 +19,7 @@ ActiveAdmin.register Product do
     f.inputs "Products" do
       f.input :name
       f.input :description
+      f.input :image
       f.input :status
       f.input :retail_price
     end
@@ -26,17 +27,25 @@ ActiveAdmin.register Product do
     f.actions
   end
 
-  show do
+  show do |product|
     attributes_table do
       row :name
       row :description
       row :status
       row :retail_price
+      row :image do
+        image_tag(product.image.url(:thumb))
+      end
     end
   end
 
   index do
     column :id
+
+    column :image do |product|
+      image_tag(product.image.url(:thumb))
+    end
+
     column :name
     column :description
     column :status

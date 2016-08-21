@@ -7,7 +7,7 @@
 %section#welcome.about-us-welcome
   .container
     .col-lg-6.wine-glass-wrapper.hidden-md.hidden-sm.hidden-xs
-      %img.wine-glass{:src => image_url('wine-glass.png')}
+      %img.wine-glass{:src => image_url('wine-glass-2.jpg')}
     .col-lg-6.welcome-content.text-center
       #welcome-header.font-pinyon-script
         Welcome
@@ -60,30 +60,13 @@
         %hr
 
     .row#member-list
-      .col-md-4.col-sm-6
-        .member
-          %img.img-thumbnail{:src => image_url('wine-glass.png'), :alt => ''}
-          .row.member-info
-            .member-name
-              Leo Nard
-            %hr
-            .member-role
-              sales executive
-      .col-md-4.col-sm-6
-        .member
-          %img.img-thumbnail{:src => image_url('wine-glass.png'), :alt => ''}
-          .row.member-info
-            .member-name
-              Leo Nard
-            %hr
-            .member-role
-              sales executive
-      .col-md-4.col-sm-6
-        .member
-          %img.img-thumbnail{:src => image_url('wine-glass.png'), :alt => ''}
-          .row.member-info
-            .member-name
-              Leo Nard
-            %hr
-            .member-role
-              sales executive
+      - @resp[:staffs].each do |staff|
+        .col-md-4.col-sm-6
+          .staff
+            %img.img-thumbnail{:src => image_url(staff.image.url(:small)), :alt => ''}
+            .row.member-info
+              .member-name
+                = staff.name
+              %hr
+              .member-role
+                = staff.role

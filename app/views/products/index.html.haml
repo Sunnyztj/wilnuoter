@@ -15,7 +15,7 @@
       .col-lg-3.col-md-4.col-sm-6
         = link_to product_path(product) do
           .product
-            %img.img-thumbnail{:src => image_url('wine-glass.png'), :alt => ''}
+            %img.img-thumbnail{:src => image_url(product.image.url(:small)), :alt => ''}
             .row.product-info
               .col-xs-7.product-name
                 = product.name
