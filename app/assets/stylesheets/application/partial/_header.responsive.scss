@@ -2,7 +2,9 @@
 @media only screen and (min-width : 1200px) {
   header.black {
     #main-menu {
-      height: $main_black_menu_height;
+      height: 40vh;
+      min-height: 310px;
+      max-height: $main_black_menu_height;
     }
   }
 
@@ -40,7 +42,9 @@
 @media only screen and (max-width : 1200px) {
   header.black {
     #main-menu {
-      height: $main_black_menu_height;
+      height: 40vh;
+      min-height: 310px;
+      max-height: $main_black_menu_height;
     }
   }
 
@@ -85,6 +89,8 @@
   header.black {
     #main-menu {
       height: 57px;
+      min-height: 57px;
+      max-height: 57px;
       margin-bottom: 0;
     }
   }
