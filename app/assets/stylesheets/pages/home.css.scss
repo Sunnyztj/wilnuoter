@@ -70,7 +70,7 @@ $learn_more_link_line_height: 25px;
 }
 
 $welcome_height: 750px;
-$wine_glass_size: 570px;
+$wine_glass_size: 420px;
 $split_wrapper_height: 40px;
 $welcome_footer_icon_size: 20px;
 
@@ -87,10 +87,13 @@ $welcome_footer_icon_size: 20px;
     .wine-glass-wrapper {
       margin-top: -200px;
       padding: 0;
+      text-align: center;
 
       .wine-glass {
         width: $wine_glass_size;
         height: $wine_glass_size;
+        border: 3px solid $white;
+        box-shadow: -8px 8px 10px rgba(176, 176, 176, 0.5);
       }
     }
 

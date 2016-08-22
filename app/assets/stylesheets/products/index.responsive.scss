@@ -6,12 +6,19 @@
 
     .container {
       .cta-image {
-        height: $wine_list_cta_image_height;
+        height: 50vh;
+        max-height: $wine_list_cta_image_height;
+        position: relative;
       }
 
       .cta-header {
-        font-size: 3em;
-        margin-top: 150px;
+        height: 40px;
+        font-size: 40px;
+        position: absolute;
+        left: 0;
+        right: 0;
+        top: 50%;
+        margin-top: -25px;
       }
     }
   }
@@ -33,12 +40,19 @@
 
     .container {
       .cta-image {
-        height: $wine_list_cta_image_height;
+        height: 50vh;
+        max-height: $wine_list_cta_image_height;
+        position: relative;
       }
 
       .cta-header {
-        font-size: 3em;
-        margin-top: 150px;
+        height: 40px;
+        font-size: 40px;
+        position: absolute;
+        left: 0;
+        right: 0;
+        top: 50%;
+        margin-top: -25px;
       }
     }
   }
@@ -72,8 +86,13 @@
       }
 
       .cta-header {
-        font-size: 2em;
-        margin-top: 80px;
+        height: 30px;
+        font-size: 30px;
+        position: absolute;
+        left: 0;
+        right: 0;
+        top: 50%;
+        margin-top: -15px;
       }
     }
   }

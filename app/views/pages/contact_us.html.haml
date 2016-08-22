@@ -58,4 +58,4 @@
             = button_to('发送留言', nil, {:id => 'send-button', :class => 'btn btn-default learn-more-link', :remote => true})
             #result
       .col-md-6#map
-        %iframe{:allowfullscreen => '', :frameborder => '0', :height => '100%', :src => 'https://www.google.com/maps/embed/v1/place?q=place_id:ChIJw12shynPsGoRArGGYxG9qI0&key=AIzaSyDegaBQRyKrjZzKrOiBgvzbCCLSfm8vNHY', :style => 'border:0', :width => '100%'}
+        %iframe{:allowfullscreen => '', :frameborder => '0', :height => '100%', :src => 'https://www.google.com/maps/embed/v1/place?q=place_id:ChIJw12shynPsGoRArGGYxG9qI0&key=' + ENV['google_map_api'], :style => 'border:0', :width => '100%'}
