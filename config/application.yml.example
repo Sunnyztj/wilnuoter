@@ -1,6 +1,7 @@
 default: &default
   gmail_username: 'email@gmail.com'
   gmail_password: 'password'
+  google_map_api: 'api key'
 
 
 development:

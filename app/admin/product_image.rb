@@ -13,7 +13,7 @@ ActiveAdmin.register ProductImage do
 
   index do
     column "Product" do |product_image|
-      "#{product_image.product.name}"
+      "#{product_image.product == nil ? '' : product_image.product.name}"
     end
     column :name
     column :image do |c|
@@ -25,7 +25,7 @@ ActiveAdmin.register ProductImage do
   show do |product_image|
     attributes_table do
       row "product" do |product_image|
-        "#{product_image.product.name}"
+        "#{product_image.product == nil ? '' : product_image.product.name}"
       end
       row :id
       row :name

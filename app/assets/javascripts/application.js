@@ -18,3 +18,4 @@
 //= require jquery-ui
 //= require bootstrap
 //= require layout
+//= require ckeditor/init

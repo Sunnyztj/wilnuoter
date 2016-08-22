@@ -12,7 +12,7 @@
 #wine-list
   .container.list{:class => has_pagination ? 'list-with-pagination' : 'list-without-pagination'}
     - @resp[:products].each do |product|
-      .col-lg-3.col-md-4.col-sm-6
+      .col-lg-3.col-md-4.col-sm-6.product-wrapper
         = link_to product_path(product) do
           .product
             %img.img-thumbnail{:src => image_url(product.image.url(:small)), :alt => ''}
