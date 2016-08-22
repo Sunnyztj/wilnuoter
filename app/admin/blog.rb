@@ -17,7 +17,7 @@ ActiveAdmin.register Blog do
   form do |f|
     f.inputs "Blog" do
       f.input :name
-      f.input :body
+      f.input :body, :as => :ckeditor
       # f.input :presence
       f.input :feature_image
     end

@@ -22,8 +22,13 @@ $product_thumbnail_height: 356px;
   margin-top: 50px;
 
   .list {
+    .product-wrapper {
+      height: 485px;
+    }
+
     .product {
       width: $product_width;
+      height: 435px;
       margin: 50px auto 0 auto;
 
       .img-thumbnail {
