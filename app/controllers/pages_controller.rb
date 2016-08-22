@@ -18,10 +18,6 @@ class PagesController < ApplicationController
     @resp[:home_sliders] = home_sliders
   end
 
-  def contact_us
-    @resp = Hash.new
-  end
-
   def about_us
     @resp = Hash.new
 

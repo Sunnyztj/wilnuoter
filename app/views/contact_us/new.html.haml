@@ -1,0 +1,53 @@
+#wine-list-cta
+  .container
+    .cta-image{:style => 'background-image: url(' + image_url('red-wine.jpg') + ')'}
+      .cta-header.text-center
+        联系我们
+
+#contact-info
+  .container.text-center
+    .row
+      .col-sm-4.col-xs-12
+        .phone-icon.contact-icon
+          %i.fa.fa-phone
+        .phone.contact-content
+          (00) 123 456 789
+      .col-sm-4.col-xs-12
+        .address-icon.contact-icon
+          %i.fa.fa-map-marker
+        .address.contact-content
+          81 Gordon Rd, Mandurah SA 5000, Adelaide
+      .col-sm-4.col-xs-12
+        .email-icon.contact-icon
+          %i.fa.fa-envelope
+        .email.contact-content
+          wilnuoter.wine@gmail.com
+    .row
+      %hr
+%section#contact-us
+  .container
+    #contact-us-header-wrapper.text-center
+      .contact-us-header-logo.font-pinyon-script
+        WilnuoterWine
+      .contact-us-header
+        联系我们
+      #contact-us-split-wrapper
+        .hr-image-wrapper
+          %img.split-image{:src => image_url('hr-decoration-on-white.png')}
+        %hr
+    .row
+      #contact-us-content.col-sm-8.col-sm-offset-2.text-center
+        致力从南澳各地最佳区域甄选葡萄,打造顶级美酒,而重点则聚焦南阿德莱德产区。您在品尝我们的佳酿时,已经同我们一道共同开始踏上一段精彩的历程。
+    .row
+      #social-list.text-center
+        %i.fa.fa-facebook
+        %i.fa.fa-twitter
+        %i.fa.fa-google-plus
+        %i.fa.fa-pinterest-p
+    .row.contact-form-and-map
+      .col-md-6#contact-form-wrapper
+        = render 'form', contact_us: @contact_us
+
+      .col-md-6#map
+        %iframe{width: "100%", height: "100%", style: "border:0", frameborder: "0", src: "https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3272.1079651027353!2d138.55965!3d-34.903739999999985!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x6ab0cedc429ce0b3%3A0x782515e4c2958eca!2sCan%3ADo+Hearing!5e0!3m2!1sen!2sau!4v1430363927942"}
+

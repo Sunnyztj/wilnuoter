@@ -1,0 +1,10 @@
+= simple_form_for contact_us, url: contact_path, remote: true, wrapper: :horizontal_form, html: {id: 'contact_us_form'}, defaults: { input_html: { :class => "form-control" }} do |f|
+  .contact-form-header
+    我们很期待您的留言
+  = f.input :name, label: false, placeholder: '名字' 
+  = f.input :email, label: false, placeholder: '电子邮箱'
+  = f.input :phone_number, label: false, placeholder: '联系电话'
+  = f.input :subject, label: false, placeholder: '主题'
+  = f.input :message, as: :text, label: false, placeholder: '留言', input_html: {rows: 4}
+  = f.hidden_field :captcha
+  .text-right= button_tag 'Submit', class: 'btn btn-lg btn-success', disable_with: 'Please wait ...'

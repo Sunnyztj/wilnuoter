@@ -1,0 +1,6 @@
+<% if @contact_us.valid? %>
+  alert('十分感谢您的关注，我们将尽快与您联系。');
+  $('#contact_us_form').replaceWith('<%=j render 'form', contact_us: ContactUs.new %>');
+<% else %>
+  $('#contact_us_form').replaceWith('<%=j render 'form', contact_us: @contact_us %>');
+<% end %>

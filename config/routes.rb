@@ -4,11 +4,13 @@ Rails.application.routes.draw do
 
   root 'pages#index'
 
+  get  '/contact', to: 'contact_us#new', as: :contact
+  post '/contact', to: 'contact_us#create'
+
   resources :products
   resources :pages
   resources :blogs
 
-  get 'contact' => 'pages#contact_us'
   get 'about' => 'pages#about_us'
 
   post 'send_contact_query' => 'pages#send_contact_query'
