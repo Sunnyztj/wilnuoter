@@ -12,6 +12,6 @@ Rails.application.config.assets.version = '1.0'
 Rails.application.config.assets.precompile += %w( polyfills.js )
 # Rails.application.config.assets.precompile += ['vendor/*']
 
-config.assets.precompile += %w( ckeditor/* )
+Rails.application.config.assets.precompile += %w( ckeditor/* )
 Rails.application.config.assets.precompile += %w( products/show/wine_image_preview.js )
 Rails.application.config.assets.precompile += %w( contact_us/contact_us.js )
