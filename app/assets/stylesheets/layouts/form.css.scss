@@ -1,0 +1,65 @@
+label { cursor: pointer; }
+.form-group {
+  position: relative;
+  @extend .clearfix;
+  &.form-group-horizontal {
+    margin-left: -$gutter/2;
+    margin-right: -$gutter/2;
+  }
+  &.input-inline label.radio, &.input-inline span.radio {
+    display: inline-block;
+    margin: 6px $gutter 0 0;
+  }
+  .control-label {
+    display: block;
+    text-align: left;
+    color: $font-color;
+    margin: 6px 0;
+    border-radius: 0;
+    @extend .font-medium;
+  }
+  label.radio input, label.checkbox input { margin-top: 5px; }
+  small.help-block {
+    color: $gray-light;
+    margin: 8px 0 0;
+    line-height: 1.2;
+    @extend .font-mini;
+  }
+  .form-control {
+    padding: 7px;
+  }
+  select + .form-control-feedback,
+  .input-group .form-control-feedback { display: none; }
+  .form-control-feedback {
+    position: absolute;
+    z-index: 9;
+    top: -25px;
+    right: $gutter;
+    color: $red;
+  }
+  &.has-error {
+    label.radio,
+    label.checkbox,
+    label.well, label.well a,
+    .control-label { color: $red; }
+    .form-control, label.well { border-color: $red; }
+    .help-block { display: none; }
+
+    ::-webkit-input-placeholder { color: $red !important; }
+    :-moz-placeholder { color: $red !important; }
+    ::-moz-placeholder { color: $red !important; }
+    :-ms-input-placeholder { color: $red !important; }
+  }
+  &.disabled {
+    .form-control {
+      color: $gray-light;
+      opacity: 0.8;
+      background: $gray-lighter;
+    }
+  }
+}
+
+::-webkit-input-placeholder { color: #bbb !important; }
+:-moz-placeholder { color: #bbb !important; }
+::-moz-placeholder { color: #bbb !important; }
+:-ms-input-placeholder { color: #bbb !important; }
