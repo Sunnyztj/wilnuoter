@@ -1,5 +1,7 @@
+$header_cta_image_height: 476px;
+
 @media only screen and (min-width : 1200px) {
-  #wine-list-cta {
+  #header-cta {
     margin-top: -268px;
     position: relative;
     z-index: $header_cta_z_index;
@@ -7,7 +9,7 @@
     .container {
       .cta-image {
         height: 50vh;
-        max-height: $wine_list_cta_image_height;
+        max-height: $header_cta_image_height;
         position: relative;
       }
 
@@ -20,20 +22,12 @@
         top: 50%;
         margin-top: -25px;
       }
-    }
-  }
-
-  #wine-label-and-social {
-    height: 60px;
-
-    #share-links {
-      text-align: right;
     }
   }
 }
 
 @media only screen and (max-width : 1200px) {
-  #wine-list-cta {
+  #header-cta {
     margin-top: -268px;
     position: relative;
     z-index: $header_cta_z_index;
@@ -41,7 +35,7 @@
     .container {
       .cta-image {
         height: 50vh;
-        max-height: $wine_list_cta_image_height;
+        max-height: $header_cta_image_height;
         position: relative;
       }
 
@@ -54,28 +48,17 @@
         top: 50%;
         margin-top: -25px;
       }
-    }
-  }
-
-  #wine-label-and-social {
-    height: 60px;
-
-    #share-links {
-      text-align: right;
     }
   }
 }
 
 /* Medium Devices, Desktops */
 @media only screen and (max-width : 992px) {
-  #wine-details {
-    text-align: center;
-  }
 }
 
 /* Small Devices, Tablets */
 @media only screen and (max-width : 768px) {
-  #wine-list-cta {
+  #header-cta {
     margin-top: 0;
     position: relative;
     z-index: $header_cta_sm_z_index;
@@ -94,18 +77,6 @@
         top: 50%;
         margin-top: -15px;
       }
-    }
-  }
-
-  #wine-label-and-social {
-    height: 90px;
-
-    #wine-labels {
-      text-align: center;
-    }
-
-    #share-links {
-      text-align: center;
     }
   }
 }

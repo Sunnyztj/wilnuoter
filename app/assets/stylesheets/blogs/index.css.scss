@@ -1,4 +1,5 @@
 #blog-list {
+  @include default_background;
   .blog {
     overflow: hidden;
 

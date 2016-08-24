@@ -19,6 +19,7 @@ $product_width: 270px;
 $product_thumbnail_height: 356px;
 
 #wine-list {
+  @include default_background;
   margin-top: 50px;
 
   .list {

@@ -11,3 +11,7 @@
   -ms-filter: blur($blur);
   filter: blur($blur);
 }
+
+@mixin default_background() {
+  background: image_url('bg.png') repeat;
+}

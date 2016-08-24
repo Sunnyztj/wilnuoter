@@ -1,0 +1,14 @@
+#header-cta {
+  .container {
+    width: 99%;
+    .cta-image {
+      background: no-repeat;
+      background-size: cover;
+      overflow: hidden;
+
+      .cta-header {
+        color: $white;
+      }
+    }
+  }
+}

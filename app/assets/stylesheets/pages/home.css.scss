@@ -75,7 +75,7 @@ $split_wrapper_height: 40px;
 $welcome_footer_icon_size: 20px;
 
 #welcome {
-  background-color: $home_page_welcome_background;
+  @include default_background;
   padding-top: 100px;
   padding-bottom: 80px;
   @include inner_border;
@@ -115,7 +115,7 @@ $welcome_footer_icon_size: 20px;
         width: 100px;
         height: auto;
         margin: 0 auto;
-        background-color: $home_page_welcome_background;
+        @include default_background;
         position: relative;
         z-index: $split_wrapper_z_index;
       }

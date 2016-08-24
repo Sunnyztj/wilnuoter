@@ -13,6 +13,7 @@ $member_width: 270px;
 $member_thumbnail_height: 356px;
 
 #our-team {
+  @include default_background;
   padding-top: 50px;
 
   .our-team-header-logo {
@@ -34,7 +35,7 @@ $member_thumbnail_height: 356px;
       width: 100px;
       height: auto;
       margin: 0 auto;
-      background-color: $white;
+      @include default_background;
       position: relative;
       z-index: $split_wrapper_z_index;
     }

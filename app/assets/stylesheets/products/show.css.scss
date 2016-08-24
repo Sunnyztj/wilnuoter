@@ -1,6 +1,7 @@
 $wine_product_cta_image_height: 476px;
 
 #wine-details {
+  @include default_background;
   .container {
     color: $product_thumbnail_name_color;
 
@@ -138,7 +139,8 @@ $wine_product_cta_image_height: 476px;
 }
 
 #related-wines {
-  margin-top: 70px;
+  @include default_background;
+  padding-top: 70px;
 
   .related-wines-header-logo {
     color: $logo_color;
@@ -159,7 +161,7 @@ $wine_product_cta_image_height: 476px;
       width: 100px;
       height: auto;
       margin: 0 auto;
-      background-color: $white;
+      @include default_background;
       position: relative;
       z-index: $split_wrapper_z_index;
     }
