@@ -44,7 +44,7 @@
           height: 70px;
           padding-top: 7px;
           display: inline-block;
-          color: #e5e5e5;
+          color: #dbdbdb;
           font-size: 4em;
           //background-color: darkgreen;
           overflow: hidden;
@@ -80,5 +80,10 @@
 
   #list-pagination {
     margin-top: 20px;
+  }
+
+  .highlight-on-hover:hover {
+    cursor: pointer;
+    background-color: #e9e9e9;
   }
 }

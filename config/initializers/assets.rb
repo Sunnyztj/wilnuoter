@@ -15,3 +15,6 @@ Rails.application.config.assets.precompile += %w( polyfills.js )
 Rails.application.config.assets.precompile += %w( ckeditor/* )
 Rails.application.config.assets.precompile += %w( products/show/wine_image_preview.js )
 Rails.application.config.assets.precompile += %w( contact_us/contact_us.js )
+
+
+Rails.application.config.assets.precompile += %w( utils/highlighter/highlighter.js )
