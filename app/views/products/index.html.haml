@@ -1,3 +1,6 @@
+- content_for :custom_javascripts do
+  = javascript_include_tag 'utils/highlighter/highlighter'
+
 #wine-list-cta
   .container
     .cta-image{:style => 'background-image: url(' + image_url('red-wine.jpg') + ')'}
@@ -14,7 +17,7 @@
     - @resp[:products].each do |product|
       .col-lg-3.col-md-4.col-sm-6.product-wrapper
         = link_to product_path(product) do
-          .product
+          .product{:id => product.id}
             %img.img-thumbnail{:src => image_url(product.image.url(:small)), :alt => ''}
             .row.product-info
               .col-xs-7.product-name

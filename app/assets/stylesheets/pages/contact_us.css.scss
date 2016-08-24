@@ -24,7 +24,7 @@
 
 #contact-us {
   @include default_background;
-  margin-top: 70px;
+  padding-top: 70px;
 
   .contact-us-header-logo {
     color: $logo_color;
