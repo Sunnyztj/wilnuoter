@@ -1,5 +1,7 @@
 - content_for :custom_javascripts do
   = javascript_include_tag 'products/show/wine_image_preview'
+- content_for :custom_javascripts do
+  = javascript_include_tag 'utils/highlighter/highlighter'
 
 - product = @resp[:product]
 
@@ -84,7 +86,7 @@
           - @resp[:related_products].each do |related_product|
             .col-lg-3.col-md-4.col-sm-6
               = link_to product_path(related_product) do
-                .product
+                .product{:id => related_product.id}
                   %img.img-thumbnail{:src => image_url(related_product.image.url(:small)), :alt => ''}
                   .row.product-info
                     .col-xs-7.product-name
