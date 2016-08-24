@@ -15,3 +15,10 @@
 @mixin default_background() {
   background: image_url('bg.png') repeat;
 }
+
+@mixin class_transition($time) {
+  -webkit-transition: all $time;
+  -moz-transition: all $time;
+  -o-transition: all $time;
+  transition: all $time;
+}
