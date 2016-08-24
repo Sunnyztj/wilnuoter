@@ -5,16 +5,6 @@
 $(function () {
     var wineList = $('#wine-list');
 
-    wineList.hover(
-        function() {
-
-        },
-        function() {
-            wineList.find('.product').removeClass('highlighted');
-            wineList.find('.product').removeClass('un-highlighted');
-        }
-    );
-
     wineList.find('.product').hover(
         function() {
             var hoveredID = $(this).attr('id');
@@ -30,7 +20,8 @@ $(function () {
             });
         },
         function() {
-
+            wineList.find('.product').removeClass('highlighted');
+            wineList.find('.product').removeClass('un-highlighted');
         }
     );
 });
