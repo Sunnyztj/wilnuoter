@@ -7,4 +7,4 @@
   = f.input :subject, label: false, placeholder: '主题'
   = f.input :message, as: :text, label: false, placeholder: '留言', input_html: {rows: 4}
   = f.hidden_field :captcha
-  .text-left= button_tag '发送', class: 'btn btn-default learn-more-link', disable_with: 'Please wait ...'
+  .text-left= button_tag '发送', class: 'btn btn-default learn-more-link', data:{ disable_with: '发送中...' }
