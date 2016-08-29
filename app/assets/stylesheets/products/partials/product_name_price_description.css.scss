@@ -1,0 +1,23 @@
+#wine-name {
+  font-family: 'Philosopher', sans-serif;
+  font-size: 2em;
+}
+
+#wine-price {
+  line-height: 80px;
+  font-family: 'Cinzel', sans-serif;
+  font-size: 2em;
+  font-weight: bold;
+  color: $product_price_color;
+}
+
+#wine-description {
+  font-family: 'Philosopher', sans-serif;
+
+  hr {
+    border: none;
+    border-top: 1px dashed #e5e5e5;
+    margin-top: 30px;
+    margin-bottom: 0;
+  }
+}

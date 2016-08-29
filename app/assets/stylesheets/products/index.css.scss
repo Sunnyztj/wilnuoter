@@ -58,15 +58,15 @@ $product_thumbnail_height: 356px;
     }
 
     .un-highlighted {
-      opacity: 0.4;
+      opacity: 1;
     }
 
     .highlighted {
-      -webkit-transform: scale(1.1);
-      -moz-transform: scale(1.1);
-      -ms-transform: scale(1.1);
-      -o-transform: scale(1.1);
-      transform: scale(1.1);
+      -webkit-transform: scale(1.03);
+      -moz-transform: scale(1.03);
+      -ms-transform: scale(1.03);
+      -o-transform: scale(1.03);
+      transform: scale(1.03);
     }
   }
 
