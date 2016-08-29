@@ -48,6 +48,11 @@
 @import "products/index";
 @import "products/index.responsive";
 
+@import "products/partials/product_name_price_description";
+@import "products/partials/product_image_carousel";
+@import "products/partials/product_multi_images";
+@import "products/partials/product_single_image";
+
 @import "products/show";
 @import "products/show.responsive";
 
