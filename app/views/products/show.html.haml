@@ -22,9 +22,9 @@
     - elsif product.product_images.length <= 1
       = render 'products/partials/product_image_carousel', :product => product
       .row
-        .col-md-6.hidden-sm.hidden-xs.text-center
+        .col-md-5.hidden-sm.hidden-xs.text-center
           = render 'products/partials/product_single_image', :product => product
-        .col-md-6.col-xs-12
+        .col-md-7.col-xs-12
           = render 'products/partials/product_name_price_description', :product => product
 
     - else
