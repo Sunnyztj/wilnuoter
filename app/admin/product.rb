@@ -19,7 +19,7 @@ ActiveAdmin.register Product do
     f.inputs "Products" do
       f.input :name
       f.input :description, :as => :ckeditor
-      f.input :image
+      f.input :image, as: :file, :hint => image_tag(f.object.image.url(:small))
       f.input :status
       f.input :retail_price
     end

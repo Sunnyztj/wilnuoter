@@ -6,7 +6,7 @@ ActiveAdmin.register ProductImage do
     f.inputs "Details" do
       f.input :product_id, as: :select, collection: Product.all
       f.input :name
-      f.input :image, required: false, as: :file, :hint => f.template.image_tag(f.object.image.url(:small))
+      f.input :image, as: :file, :hint => image_tag(f.object.image.url(:small))
     end
     f.actions
   end
