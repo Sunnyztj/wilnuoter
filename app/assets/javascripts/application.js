@@ -19,3 +19,4 @@
 //= require bootstrap
 //= require layout
 //= require ckeditor/init
+//= require elevateZoom/jquery.elevateZoom-3.0.8.min.js

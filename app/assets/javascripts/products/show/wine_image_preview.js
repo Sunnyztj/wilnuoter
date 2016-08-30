@@ -9,8 +9,9 @@ $(function() {
         var largeImage = $('#wine-image-large').find('.large-image');
 
         largeImage.fadeOut(300, function() {
-            largeImage.attr({src: largeUrl});
-            largeImage.fadeIn(300);
+            largeImage.attr({src: largeUrl, 'data-zoom-image': largeUrl});
+            largeImage.fadeIn(300, function() {
+            });
         })
     });
 });
