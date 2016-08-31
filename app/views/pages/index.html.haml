@@ -21,8 +21,7 @@
               .row
                 .cta-main-content.logo.logo-white.col-md-5.pull-right
                   = slider.body
-              %a.btn.btn-default.learn-more-link
-                = slider.button
+                = link_to "#{slider.button}", slider.button_url, class: 'btn btn-default learn-more-link'
 
   / Controls
   %a.left.carousel-control{'data-slide' => 'prev', :href => '#cta', :role => 'button'}

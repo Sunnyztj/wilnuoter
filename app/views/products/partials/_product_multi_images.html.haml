@@ -1,7 +1,7 @@
 #wine-images.hidden-sm.hidden-xs
   .col-md-9#wine-image-large
     %span.vertical-helper
-    %img.large-image{:src => image_url(product.product_images.first.image.url), 'data-zoom-image' => image_url(product.product_images.first.image.url)}
+    %img.large-image{:src => image_url(product.product_images.first.image.url(:large), 'data-zoom-image' => image_url(product.product_images.first.image.url(:large))}
   .col-md-3#wine-image-preview-wrapper
     #wine-image-preview-area
       - product.product_images.each do |product_image|
