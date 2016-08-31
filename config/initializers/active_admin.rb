@@ -272,4 +272,5 @@ ActiveAdmin.setup do |config|
 
   config.register_stylesheet 'application/ckeditor.css'
   config.register_javascript 'ckeditor/init.js'
+  config.before_filter :set_admin_locale
 end
