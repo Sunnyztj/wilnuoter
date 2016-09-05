@@ -34,9 +34,9 @@
 
 %section#welcome
   .container
-    .col-md-6.wine-glass-wrapper.visible-md.hidden-sm.hidden-xs
-      %img.wine-glass{:src => image_url('wine-glass-2.jpg')}
-    .col-md-6.welcome-content.text-center
+    -#.col-md-6.wine-glass-wrapper.visible-md.hidden-sm.hidden-xs
+    -#  %img.wine-glass{:src => image_url('wine-glass-2.jpg')}
+    .col-md-12.welcome-content.text-center
       #welcome-header.font-pinyon-script
         Welcome
       #welcome-logo.logo.logo-black
@@ -48,7 +48,7 @@
       #welcome-main-content
         %span.logo.logo-black Wilnuoterwine
         致力从南澳各地最佳区域甄选葡萄,打造顶级美酒,而重点则聚焦南阿德莱德产区。您在品尝我们的佳酿时,已经同我们一道共同开始踏上一段精彩的历程。
-      %a.btn.btn-default.learn-more-link 了解更多
+      -#%a.btn.btn-default.learn-more-link 了解更多
   .container
     #welcome-footer.row.text-center
       .col-sm-4
@@ -111,3 +111,37 @@
           %a{:href => 'https://caudovineyard.com.au/'}
             %i.fa.fa-external-link
 
+%section#home-page-blog-and-video
+  .container
+    #blog-and-video-header-wrapper.text-center
+      #blog-and-video-header-logo.font-pinyon-script
+        Welcome
+      #blog-and-video-logo-header
+        最新红酒资讯&视频
+      #blog-and-video-split-wrapper
+        .hr-image-wrapper
+          %img.split-image{:src => image_url('hr-decoration-on-white.png')}
+        %hr
+    .col-md-6
+      - @resp[:blogs].each do |blog|
+        = link_to blog_path(blog) do
+          .row.highlight-on-hover.blog
+            .blog-content
+              .blog-created-time.hidden-xs
+                .blog-created-month
+                  = blog.created_at.strftime('%^b')
+                .blog-created-day
+                  = blog.created_at.strftime('%d')
+              .blog-created-time-xs.visible-xs
+                %i.fa.fa-calendar
+                %span
+                  = blog.created_at.strftime('%^b %d')
+              .blog-body
+                %p
+                  = raw truncate(strip_tags(blog.body.html_safe), length: 150)
+              .blog-continue
+                %span 更多
+                %i.fa.fa-long-arrow-right
+    .col-md-6
+      .video-wrapper
+        %iframe{:src => 'https://www.youtube.com/embed/KBhvrDTZCd8', :frameborder => '0'}

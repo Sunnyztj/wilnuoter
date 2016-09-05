@@ -14,8 +14,11 @@ class PagesController < ApplicationController
 
     home_sliders = HomeSlider.active
 
+    blogs = Blog.order('updated_at desc').limit(2)
+
     @resp[:header_type] = 'white'
     @resp[:home_sliders] = home_sliders
+    @resp[:blogs] = blogs
   end
 
   def about_us
