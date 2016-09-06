@@ -37,7 +37,7 @@
       #wine-labels.col-sm-6.col-xs-12
         %i.fa.fa-tags
         #labels
-          BLACKBERRY, PLUM, VANILLA, COCOA
+          = product.flavours.map(&:name).join(', ')
       #share-links.col-sm-6.col-xs-12
         #share-link-title Share Link:
         %i.fa.fa-facebook

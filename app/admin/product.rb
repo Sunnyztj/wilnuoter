@@ -13,7 +13,7 @@ ActiveAdmin.register Product do
 #   permitted
 # end
 
-  permit_params :name, :url_name, :varietal, :description, :status, :vineyard, :winemaking, :colour, :aroma, :flavour, :alcohol, :country, :bottle_size, :retail_price, :friends_price, :vintage, :review_points, :review_author, :review_body, :position, :sold_out, :product_code, :image
+  permit_params :name, :url_name, :varietal, :description, :status, :vineyard, :winemaking, :colour, :aroma, :alcohol, :country, :bottle_size, :retail_price, :friends_price, :vintage, :review_points, :review_author, :review_body, :position, :sold_out, :product_code, :image, flavour_ids: []
 
   form do |f|
     f.inputs "Products" do
@@ -22,6 +22,7 @@ ActiveAdmin.register Product do
       f.input :image, as: :file, :hint => image_tag(f.object.image.url(:small))
       f.input :status
       f.input :retail_price
+      f.input :flavours, :as => :check_boxes, :collection => Flavour.all
     end
 
     f.actions
@@ -35,6 +36,9 @@ ActiveAdmin.register Product do
       row :retail_price
       row :image do
         image_tag(product.image.url(:thumb))
+      end
+      row :flavour do
+        product.flavours.map(&:name).join(', ')
       end
     end
   end
@@ -50,6 +54,10 @@ ActiveAdmin.register Product do
     column :description
     column :status
     column :retail_price
+
+    column :flavour do |product|
+      product.flavours.map(&:name).join(', ')
+    end
 
     actions
   end
