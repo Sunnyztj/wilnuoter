@@ -5,6 +5,8 @@ class Product < ActiveRecord::Base
 
 
   has_many :product_images
+  has_and_belongs_to_many :flavours
+
   validates :status, inclusion: {in: STATUS}
 
   scope :publish, ->{ where(status: 'public') }
