@@ -17,6 +17,18 @@ $learn_more_link_line_height: 25px;
     left: 25%;
   }
 
+  .carousel-indicators {
+    .active {
+      width: 15px;
+      height: 15px;
+    }
+
+    li {
+      width: 14px;
+      height: 14px;
+    }
+  }
+
   .carousel-inner {
     height: 100%;
 
@@ -40,7 +52,7 @@ $learn_more_link_line_height: 25px;
 
   .container {
     .cta-content {
-      text-align: right;
+      text-align: left;
       color: $cta_content_font_color;
 
       .cta-header {
