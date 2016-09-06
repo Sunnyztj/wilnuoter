@@ -6,6 +6,7 @@
       text-align: right;
       left: auto;
       right: 10%;
+      padding-bottom: 7vh;
     }
 
     .carousel-inner {
@@ -61,12 +62,13 @@
       text-align: right;
       left: auto;
       right: 10%;
+      padding-bottom: 7vh;
     }
     .carousel-inner {
       min-height: 550px;
       .item {
         .carousel-caption {
-          padding-bottom: 15vh;
+          padding-bottom: 10vh;
         }
       }
     }
@@ -151,7 +153,7 @@
       margin-top: 45vh;
 
       .cta-header {
-        font-size: 1.3em;
+        font-size: 1.6em;
         letter-spacing: 0;
 
         .logo {
