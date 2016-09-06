@@ -32,8 +32,6 @@ ActiveAdmin.register ProductImage do
       row :image do
         image_tag(product_image.image.url(:small))
       end
-      row :created_at
-      row :updated_at
     end
     active_admin_comments
   end
