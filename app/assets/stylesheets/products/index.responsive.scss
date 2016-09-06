@@ -71,6 +71,18 @@
   #wine-details {
     text-align: center;
   }
+
+  #wine-label-and-social {
+    height: 90px;
+
+    #wine-labels {
+      text-align: center;
+    }
+
+    #share-links {
+      text-align: center;
+    }
+  }
 }
 
 /* Small Devices, Tablets */
@@ -94,18 +106,6 @@
         top: 50%;
         margin-top: -15px;
       }
-    }
-  }
-
-  #wine-label-and-social {
-    height: 90px;
-
-    #wine-labels {
-      text-align: center;
-    }
-
-    #share-links {
-      text-align: center;
     }
   }
 }
