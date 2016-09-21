@@ -1,61 +1,6 @@
-$top_footer_height: 50px;
-$main_footer_height: 518px;
-$footer_logo_row: 60px;
-$footer_content_single_line_height: 30px;
-$footer_navigation_height: 60px;
-$footer_copyright_height: 50px;
-
-#top-footer {
-  height: $top_footer_height;
-  line-height: $top_footer_height;
-  background-color: $top_footer_background;
+footer {
+  height: 120px;
+  text-align: center;
+  padding-top: 40px;
+  @include inner_border;
 }
-
-#footer-social {
-  color: $footer_font_color;
-}
-
-#main-footer {
-  padding-top: 0;
-  padding-bottom: 0;
-  background-color: $main_footer_background;
-  color: $footer_font_color;
-
-  .logo-row {
-    width: 100%;
-    height: $footer_logo_row;
-    line-height: $footer_logo_row;
-    font-size: 2.2em;
-    overflow: hidden;
-  }
-
-  #footer-content {
-    margin-top: 15px;
-
-    p {
-      line-height: $footer_content_single_line_height;
-    }
-  }
-
-  #footer-navigation {
-    line-height: $footer_navigation_height;
-    border-bottom: 1px solid $footer_navigation_border_color;
-    margin: 33px 15px 0 15px;
-
-    .footer-navigation-split {
-      margin: 0 15px;
-    }
-  }
-
-  #footer-copyright {
-    width: 100%;
-    height: $footer_copyright_height;
-    line-height: $footer_copyright_height;
-    overflow: hidden;
-
-    .logo {
-      letter-spacing: 0;
-    }
-  }
-}
-

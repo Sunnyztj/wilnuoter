@@ -12,7 +12,7 @@
     .carousel-inner {
       .item {
         .carousel-caption {
-          padding-bottom: 10vh;
+          padding-bottom: 20vh;
         }
       }
 
@@ -21,16 +21,46 @@
         //margin-top: 40vh;
 
         .cta-header {
-          font-size: 2.5em;
-          letter-spacing: 8px;
+          font-size: 3em;
+          letter-spacing: 2px;
+        }
 
-          .logo {
-            letter-spacing: 8px;
-          }
+        .cta-main-content {
+          font-size: 1.5em;
         }
       }
     }
   }
+
+
+  #introduction {
+    .col-md-9 {
+      padding-left: 50px;
+    }
+  }
+
+  #about-us-and-products {
+    #about-us-section {
+      height: 100%;
+    }
+
+    #products-section {
+      height: 100%;
+    }
+
+    a {
+      line-height: 400px;
+    }
+  }
+
+  #video {
+    height: 600px;
+
+    .video-link {
+      margin-top: 450px;
+    }
+  }
+
 
   #welcome {
     .container {
@@ -64,26 +94,58 @@
       right: 10%;
       padding-bottom: 7vh;
     }
+
     .carousel-inner {
-      min-height: 550px;
       .item {
         .carousel-caption {
-          padding-bottom: 10vh;
+          padding-bottom: 20vh;
+        }
+      }
+
+      .container {
+        width: 100%;
+        //margin-top: 40vh;
+
+        .cta-header {
+          font-size: 3em;
+          letter-spacing: 2px;
+        }
+
+        .cta-main-content {
+          font-size: 1.5em;
         }
       }
     }
-    .container {
-      width: 100%;
-      //margin-top: 40vh;
+  }
 
-      .cta-header {
-        font-size: 2.5em;
-        letter-spacing: 8px;
 
-        .logo {
-          letter-spacing: 8px;
-        }
-      }
+  #introduction {
+    .col-md-9 {
+      padding-left: 50px;
+    }
+  }
+
+  #about-us-and-products {
+    #about-us-section {
+      height: 100%;
+    }
+
+    #products-section {
+      height: 100%;
+    }
+
+    a {
+      line-height: 400px;
+    }
+  }
+
+
+
+  #video {
+    height: 600px;
+
+    .video-link {
+      margin-top: 450px;
     }
   }
 
@@ -121,7 +183,7 @@
     .carousel-inner {
       .item {
         .carousel-caption {
-          padding-bottom: 15vh;
+          padding-bottom: 28vh;
         }
       }
     }
@@ -138,6 +200,13 @@
       .cta-content {
         text-align: center;
       }
+    }
+  }
+
+
+  #introduction {
+    .col-md-9 {
+      padding-left: 0;
     }
   }
 }
@@ -160,6 +229,30 @@
           letter-spacing: 0;
         }
       }
+    }
+  }
+
+  #about-us-and-products {
+    height: 600px;
+
+    #about-us-section {
+      height: 300px;
+    }
+
+    #products-section {
+      height: 300px;
+    }
+
+    a {
+      line-height: 300px;
+    }
+  }
+
+  #video {
+    height: 300px;
+
+    .video-link {
+      margin-top: 120px;
     }
   }
 

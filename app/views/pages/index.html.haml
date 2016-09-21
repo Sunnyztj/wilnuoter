@@ -1,3 +1,6 @@
+- content_for :custom_javascripts do
+  = javascript_include_tag 'pages/index'
+
 %section#cta.slide{"data-ride" => "carousel"}
   / Indicators
 
@@ -15,13 +18,11 @@
         .img{:style => 'background-image: url(' + slider.image.url(:large) + ');'}
         .carousel-caption
           .container
-            .cta-content
+            .cta-content.col-md-8.pull-right
               .cta-header.logo.logo-white
                 = slider.name
-              .row
-                .cta-main-content.logo.logo-white.col-md-5
-                  = slider.body
-              = link_to "#{slider.button}", slider.button_url, class: 'btn btn-default learn-more-link'
+              .cta-main-content
+                = slider.body
 
   / Controls
   %a.left.carousel-control{'data-slide' => 'prev', :href => '#cta', :role => 'button'}
@@ -31,117 +32,21 @@
     %span.glyphicon.glyphicon-chevron-right{'aria-hidden' => 'true'}
     %span.sr-only Next
 
+%section#introduction
+  .container
+    %img.visible-md.visible-lg{:src => image_url('bottle.png')}
+    .col-md-9.pull-right.text-center
+      .title
+        维诺特－百年佳酿传奇
+      .content
+        Wilnuoterwine维诺特(Wilnuoter)酒庄始建于1890年,酒庄位于南澳大利亚古老 酒区巴罗莎山谷,更在麦卡伦山谷、阿德莱德山,库纳瓦拉,莫瑞河岸等南澳其它知 名酒区拥有上千株葡萄种植园。 酒庄将百年传统酿造工艺以及现代化管理技术相结 合,其出产的葡萄酒多次荣获国际葡萄酒奖项,不单常年供销当地酒业零售店及高级 西餐厅,更专注于高档酒款出口国外,在欧美等国家的出口量更是以惊人的速度增涨 着,如今中国崛起,维诺特也借此良机,于今年进军亚洲市场。
 
-%section#welcome
-  .container
-    -#.col-md-6.wine-glass-wrapper.visible-md.hidden-sm.hidden-xs
-    -#  %img.wine-glass{:src => image_url('wine-glass-2.jpg')}
-    .col-md-12.welcome-content.text-center
-      #welcome-header.font-pinyon-script
-        Welcome
-      #welcome-logo.logo.logo-black
-        WILNUOTERWINE
-      #welcome-split-wrapper
-        .hr-image-wrapper
-          %img.split-image{:src => image_url('hr-decoration-on-white.png')}
-        %hr
-      #welcome-main-content
-        %span.logo.logo-black Wilnuoterwine
-        维诺特（Wilnuoter）酒庄始建于1890年，酒庄位于南澳大利亚古老酒区巴罗莎山谷，更在麦卡伦山谷、阿德莱德山，库纳瓦拉，莫瑞河岸等南澳其它知名酒区拥有上千株葡萄种植园。 酒庄将百年传统酿造工艺以及现代化管理技术相结合，其出产的葡萄酒多次荣获国际葡萄酒奖项，不单常年供销当地酒业零售店及高级西餐厅，更专注于高档酒款出口国外，在欧美等国家的出口量更是以惊人的速度增涨着，如今中国崛起，维诺特也借此良机，于今年进军亚洲市场。
-      -#%a.btn.btn-default.learn-more-link 了解更多
-  .container
-    #welcome-footer.row.text-center
-      .col-sm-4
-        .welcome-footer-header
-          联系电话
-        .welcome-footer-content
-          (00) 123 456 789
-      .col-sm-4
-        .welcome-footer-header
-          营业时间
-        .welcome-footer-content
-          周一到周五: 8:00 - 10:00
-      .col-sm-4
-        .welcome-footer-header
-          关注我们
-        .welcome-footer-content
-          .col-xs-2.col-xs-offset-2
-            %i.fa.fa-wechat
-          .col-xs-2
-            %i.fa.fa-qq
-          .col-xs-2
-            %i.fa.fa-weibo
-          .col-xs-2
-            %i.fa.fa-pinterest-p
+%section#about-us-and-products
+  #about-us-section.col-sm-6.about-us-and-products-area
+    = link_to '历史探索', about_path
+  #products-section.col-sm-6.about-us-and-products-area
+    = link_to '产品介绍', products_path
 
-%section#home_page_partner
-  .container
-    #partner_header_wrapper.text-center
-      .partner_header_logo.font-pinyon-script
-        WilnuoterWine
-      .partner_header
-        战略合作伙伴
-      #partner-split-wrapper
-        .hr-image-wrapper
-          %img.split-image{:src => image_url('hr-decoration-on-black.png')}
-        %hr
-    #partner-content.col-md-8.col-md-offset-2
-      .row
-        .col-sm-3.text-left
-          %img{:src => image_url('BentCreekWines-web-header-logo.png')}
-        .col-sm-7
-          .col-sm-11.col-sm-offset-1
-            .partner-content-header
-              BENT CREEK
-            .partner-content-body
-              成立于1999年，目前在全球葡萄酒行业集体超过40年经验萨姆·瑞格里和大卫·加里克的合资伙伴关系。
-        .col-sm-2.text-center
-          %a{:href => 'http://bentcreekvineyards.com.au/wines/'}
-            %i.fa.fa-external-link
-      .row
-        .col-sm-3.text-left
-          %img{:src => image_url('Caudo_logo.png')}
-        .col-sm-7
-          .col-sm-11.col-sm-offset-1
-            .partner-content-header
-              Caudo
-            .partner-content-body
-              Caudo葡萄园生产的是掺和了艺术和最现代化的葡萄酒酿造技术，环境，生产的优质葡萄酒
-        .col-sm-2.text-center
-          %a{:href => 'https://caudovineyard.com.au/'}
-            %i.fa.fa-external-link
 
-%section#home-page-blog-and-video
-  .container
-    #blog-and-video-header-wrapper.text-center
-      #blog-and-video-header-logo.font-pinyon-script
-        WilnuoterWine
-      #blog-and-video-logo-header
-        最新红酒资讯&视频
-      #blog-and-video-split-wrapper
-        .hr-image-wrapper
-          %img.split-image{:src => image_url('hr-decoration-on-white.png')}
-        %hr
-    .col-md-6
-      - @resp[:blogs].each do |blog|
-        = link_to blog_path(blog) do
-          .row.highlight-on-hover.blog
-            .blog-content
-              .blog-created-time.hidden-xs
-                .blog-created-month
-                  = blog.created_at.strftime('%^b')
-                .blog-created-day
-                  = blog.created_at.strftime('%d')
-              .blog-created-time-xs.visible-xs
-                %i.fa.fa-calendar
-                %span
-                  = blog.created_at.strftime('%^b %d')
-              .blog-body
-                %p
-                  = raw truncate(strip_tags(blog.body.html_safe), length: 150)
-              .blog-continue
-                %span 更多
-                %i.fa.fa-long-arrow-right
-    .col-md-6
-      .video-wrapper
-        %iframe{:src => 'https://www.youtube.com/embed/KBhvrDTZCd8', :frameborder => '0'}
+%section#video
+  = link_to "观看视频", '#', class: 'btn btn-default video-link'

@@ -17,5 +17,7 @@ Rails.application.config.assets.precompile += %w( products/show/wine_image_previ
 Rails.application.config.assets.precompile += %w( products/show/wine_image_zoom.js )
 Rails.application.config.assets.precompile += %w( contact_us/contact_us.js )
 
+Rails.application.config.assets.precompile += %w( pages/index.js )
+
 
 Rails.application.config.assets.precompile += %w( utils/highlighter/highlighter.js )

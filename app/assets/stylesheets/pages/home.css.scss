@@ -6,7 +6,7 @@ $learn_more_link_line_height: 25px;
 
 #cta {
   height: 100vh;
-  //margin-top: 210px;
+  margin-top: -200px;
   position: relative;
   overflow: hidden;
   z-index: 90;
@@ -55,24 +55,15 @@ $learn_more_link_line_height: 25px;
     .cta-content {
       text-align: left;
       color: $cta_content_font_color;
+      padding: 0;
 
       .cta-header {
         height: $cta_header_height;
         line-height: $cta_header_height;
-        //font-size: 2.5em;
-        //letter-spacing: 8px;
-
-        .logo {
-          font-size: 1.1em;
-          //letter-spacing: 8px;
-        }
       }
 
       .cta-main-content {
         letter-spacing: 0;
-        .logo {
-          letter-spacing: 0;
-        }
       }
 
       .learn-more-link {
@@ -86,6 +77,90 @@ $learn_more_link_line_height: 25px;
         border-radius: $learn_more_link_height / 2;
       }
     }
+  }
+}
+
+#introduction {
+  padding-top: 30px;
+  padding-bottom: 30px;
+  position: relative;
+  background-color: white;
+  z-index: 95;
+  min-height: 500px;
+
+  img {
+    width: 210px;
+    position: absolute;
+    bottom: 30px;
+    left: 10%;
+  }
+
+  .title {
+    padding-top: 50px;
+    padding-bottom: 20px;
+    font-size: 2.5em;
+  }
+
+  .content {
+    font-size: 1.5em;
+    line-height: 2em;
+  }
+}
+
+#video {
+  background: image_url('video_bg.png') no-repeat;
+  background-size: cover;
+  text-align: center;
+  overflow: hidden;
+
+  .video-link {
+    font-size: 2.5em;
+    border-radius: 5px;
+    border: 2px solid white;
+    background-color: transparent;
+    color: white;
+  }
+}
+
+#about-us-and-products {
+  height: 400px;
+  text-align: center;
+
+  #about-us-section {
+    background: image_url('about_us_bg.png') no-repeat;
+    background-size: cover;
+  }
+
+  .about-us-and-products-area {
+    -webkit-filter: grayscale(100%); /* Chrome, Safari, Opera */
+    filter: grayscale(100%);
+    @include class_transition(0.3s);
+  }
+
+  .hover {
+    -webkit-filter: grayscale(0%); /* Chrome, Safari, Opera */
+    filter: grayscale(0%);
+    cursor: pointer;
+  }
+
+  #products-section {
+    background: image_url('products_bg.png') no-repeat;
+    background-size: cover;
+  }
+
+  a {
+    font-size: 2.5em;
+    color: #000;
+  }
+
+  a:visited {
+    color: #000;
+  }
+
+  a:hover {
+    color: #000;
+    cursor: pointer;
+    text-decoration: none;
   }
 }
 
