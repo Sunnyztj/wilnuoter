@@ -1,72 +1,26 @@
-$logo_section_height: 120px;
-$main_white_menu_height: 70px;
-$main_black_menu_height: 340px;
-
 header {
+  width: 100%;
+  background-color: white;
   position: relative;
   z-index: $header_z_index;
 
-  #logo-section {
-    height: $logo_section_height;
-    line-height: $logo_section_height;
-    font-size: 2.5em;
-    font-weight: 400;
+  #main-menu {
+    padding-top: 40px;
+
+
+    .logo-img {
+      height: 100px;
+      float: left;
+    }
+
+    .collapse.navbar-collapse.nav-header-collapse {
+      float: right;
+      padding-top: 60px;
+    }
 
     a {
-      color: $logo_color;
-      text-decoration: none;
-    }
-
-    a:visited {
-      color: $logo_color;
-      text-decoration: none;
-    }
-
-    a:hover {
-      color: $logo_color;
-      text-decoration: none;
+      font-size: 1.2em;
+      color: #000;
     }
   }
-
-  #main-menu {
-    color: $main_menu_color;
-    @include inner_border;
-    
-    .container {
-      a.active {
-        color: $logo_color;
-      }
-    }
-  }
-}
-
-
-header.white {
-  #logo-section {
-    background-color: $white;
-  }
-
-  #main-menu {
-    height: $main_white_menu_height;
-
-    .container {
-      ul {
-        li:hover {
-          background: $light-gray;
-
-          a {
-            color: $logo_color;
-          }
-
-          a:visited {
-            color: $logo_color;
-          }
-        }
-      }
-    }
-  }
-}
-
-header.black {
-  background-color: $black;
 }

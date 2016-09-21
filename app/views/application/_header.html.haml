@@ -1,18 +1,39 @@
+-#%header{:class => @resp[:header_type] == nil ? 'black' : @resp[:header_type]}
+-#  %section#logo-section.text-center.logo
+-#    = link_to 'WILNUOTERWINE', {:controller => 'pages', :action => 'index'}
+-#  #main-menu.navbar
+-#    .container
+-#      %button.navbar-toggle{'data-toggle' => 'collapse', 'data-target' => '.nav-header-collapse'}
+-#        %i.fa.fa-bars
+-#      .collapse.navbar-collapse.nav-header-collapse
+-#        %ul.nav.navbar-nav
+-#          %li
+-#            = link_to '关于我们', about_path, {:class => request.env['PATH_INFO'] == about_path ? 'active' : ''}
+-#          %li
+-#            = link_to '精品红酒', products_path, {:class => request.env['PATH_INFO'] == products_path ? 'active' : ''}
+-#          %li
+-#            = link_to '活动资讯', blogs_path, {:class => request.env['PATH_INFO'] == blogs_path ? 'active' : ''}
+-#          %li
+-#            = link_to '联系我们', contact_path, {:class => request.env['PATH_INFO'] == contact_path ? 'active' : ''}
+-#
+
 %header{:class => @resp[:header_type] == nil ? 'black' : @resp[:header_type]}
-  %section#logo-section.text-center.logo
-    = link_to 'WILNUOTERWINE', {:controller => 'pages', :action => 'index'}
   #main-menu.navbar
     .container
-      %button.navbar-toggle{'data-toggle' => 'collapse', 'data-target' => '.nav-header-collapse'}
-        %i.fa.fa-bars
-      .collapse.navbar-collapse.nav-header-collapse
-        %ul.nav.navbar-nav
-          %li
-            = link_to '关于我们', about_path, {:class => request.env['PATH_INFO'] == about_path ? 'active' : ''}
-          %li
-            = link_to '精品红酒', products_path, {:class => request.env['PATH_INFO'] == products_path ? 'active' : ''}
-          %li
-            = link_to '活动资讯', blogs_path, {:class => request.env['PATH_INFO'] == blogs_path ? 'active' : ''}
-          %li
-            = link_to '联系我们', contact_path, {:class => request.env['PATH_INFO'] == contact_path ? 'active' : ''}
-
+      .col-sm-4.visible-sm.visible-md.visible-lg
+        #logo
+          = link_to 'pages/index' do
+            %img.logo-img{:src => image_url('logo.png')}
+      .col-sm-8
+        %button.navbar-toggle{'data-toggle' => 'collapse', 'data-target' => '.nav-header-collapse'}
+          %i.fa.fa-bars
+        .collapse.navbar-collapse.nav-header-collapse
+          %ul.nav.navbar-nav
+            %li
+              = link_to '关于我们', about_path, {:class => request.env['PATH_INFO'] == about_path ? 'active' : ''}
+            %li
+              = link_to '精品红酒', products_path, {:class => request.env['PATH_INFO'] == products_path ? 'active' : ''}
+            %li
+              = link_to '活动资讯', blogs_path, {:class => request.env['PATH_INFO'] == blogs_path ? 'active' : ''}
+            %li
+              = link_to '联系我们', contact_path, {:class => request.env['PATH_INFO'] == contact_path ? 'active' : ''}
