@@ -30,6 +30,8 @@
         .collapse.navbar-collapse.nav-header-collapse
           %ul.nav.navbar-nav
             %li
+              = link_to '首页', root_path, {:class => request.env['PATH_INFO'] == root_path ? 'active' : ''}
+            %li
               = link_to '关于我们', about_path, {:class => request.env['PATH_INFO'] == about_path ? 'active' : ''}
             %li
               = link_to '精品红酒', products_path, {:class => request.env['PATH_INFO'] == products_path ? 'active' : ''}
