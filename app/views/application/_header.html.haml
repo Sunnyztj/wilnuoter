@@ -20,11 +20,11 @@
 %header{:class => @resp[:header_type] == nil ? 'black' : @resp[:header_type]}
   .container
     #main-menu.navbar
-      .col-sm-4.visible-sm.visible-md.visible-lg
+      .col-sm-3.visible-sm.visible-md.visible-lg
         #logo
           = link_to root_path do
             %img.logo-img{:src => image_url('logo.png')}
-      .col-sm-8
+      .col-sm-9
         %button.navbar-toggle{'data-toggle' => 'collapse', 'data-target' => '.nav-header-collapse'}
           %i.fa.fa-bars
         .collapse.navbar-collapse.nav-header-collapse
