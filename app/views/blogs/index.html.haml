@@ -1,9 +1,3 @@
-#wine-list-cta
-  .container
-    .cta-image{:style => 'background-image: url(' + image_url('red-wine.jpg') + ')'}
-      .cta-header.text-center
-        活动资讯
-
 - has_pagination = true
 
 - if @resp[:current_page].to_i == 1 && @resp[:blogs].length < @resp[:blog_count_per_page].to_i
