@@ -5,6 +5,8 @@ header {
   z-index: $header_z_index;
 
   #main-menu {
+    display: inline-block;
+    width: 100%;
     padding-top: 10px;
 
 
