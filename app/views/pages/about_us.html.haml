@@ -41,26 +41,26 @@
 
 - has_pagination = false
 
-%section#our-team
-  .container.list{:class => has_pagination ? 'list-with-pagination' : 'list-without-pagination'}
-    #our-team-header-wrapper.text-center
-      .our-team-header-logo.font-pinyon-script
-        Wilnuoterwine
-      .our-team-header
-        我们的团队
-      #our-team-split-wrapper
-        .hr-image-wrapper
-          %img.split-image{:src => image_url('hr-decoration-on-white.png')}
-        %hr
-
-    .row#member-list
-      - @resp[:staffs].each do |staff|
-        .col-md-4.col-sm-6
-          .staff
-            %img.img-thumbnail{:src => image_url(staff.image.url(:small)), :alt => ''}
-            .row.member-info
-              .member-name
-                = staff.name
-              %hr
-              .member-role
-                = staff.role
+-#%section#our-team
+-#  .container.list{:class => has_pagination ? 'list-with-pagination' : 'list-without-pagination'}
+-#    #our-team-header-wrapper.text-center
+-#      .our-team-header-logo.font-pinyon-script
+-#        Wilnuoterwine
+-#      .our-team-header
+-#        我们的团队
+-#      #our-team-split-wrapper
+-#        .hr-image-wrapper
+-#          %img.split-image{:src => image_url('hr-decoration-on-white.png')}
+-#        %hr
+-#
+-#    .row#member-list
+-#      - @resp[:staffs].each do |staff|
+-#        .col-md-4.col-sm-6
+-#          .staff
+-#            %img.img-thumbnail{:src => image_url(staff.image.url(:small)), :alt => ''}
+-#            .row.member-info
+-#              .member-name
+-#                = staff.name
+-#              %hr
+-#              .member-role
+-#                = staff.role
