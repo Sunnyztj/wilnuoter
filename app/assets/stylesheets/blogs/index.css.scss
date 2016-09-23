@@ -1,5 +1,7 @@
 #blog-list {
+  min-height: 700px;
   @include default_background;
+
   .blog {
     overflow: hidden;
 
