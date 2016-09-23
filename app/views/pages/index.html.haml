@@ -43,10 +43,15 @@
         Wilnuoterwine维诺特(Wilnuoter)酒庄始建于1890年,酒庄位于南澳大利亚古老 酒区巴罗莎山谷,更在麦卡伦山谷、阿德莱德山,库纳瓦拉,莫瑞河岸等南澳其它知 名酒区拥有上千株葡萄种植园。 酒庄将百年传统酿造工艺以及现代化管理技术相结 合,其出产的葡萄酒多次荣获国际葡萄酒奖项,不单常年供销当地酒业零售店及高级 西餐厅,更专注于高档酒款出口国外,在欧美等国家的出口量更是以惊人的速度增涨 着,如今中国崛起,维诺特也借此良机,于今年进军亚洲市场。
 
 %section#about-us-and-products
-  #about-us-section.col-sm-6.about-us-and-products-area
-    = link_to '历史探索', about_path
-  #products-section.col-sm-6.about-us-and-products-area
-    = link_to '产品介绍', products_path
+  .col-sm-6
+    = link_to about_path do
+      #about-us-section.about-us-and-products-area
+        历史探索
+
+  .col-sm-6
+    = link_to products_path do
+      #products-section.about-us-and-products-area
+        产品介绍
 
 
 %section#video

@@ -3,7 +3,9 @@
  */
 
 $(function(){
-    $('.about-us-and-products-area').hover(
+    var aboutUsAndProductsArea = $('.about-us-and-products-area');
+
+    aboutUsAndProductsArea.hover(
         function() {
             $(this).addClass('hover');
         },
