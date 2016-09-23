@@ -35,11 +35,22 @@ $learn_more_link_line_height: 25px;
 
     .item {
       height: 100%;
+      position: relative;
 
       .img {
         height: 100%;
         background: no-repeat;
         background-size: cover;
+      }
+
+      .img-cover {
+        position: absolute;
+        top: 0;
+        left: 0;
+        right: 0;
+        bottom: 0;
+        background-color: rgba(0, 0, 0, 0.4);
+        @include linear_gradient(rgba(0, 0, 0, 0), rgba(0, 0, 0, 0.8));
       }
 
       .carousel-caption {

@@ -22,3 +22,10 @@
   -o-transition: all $time;
   transition: all $time;
 }
+
+@mixin linear_gradient($color_from, $color_to) {
+  background: -webkit-linear-gradient($color_from, $color_from, $color_from, $color_to);
+  background: -o-linear-gradient($color_from, $color_from, $color_from, $color_to);
+  background: -moz-linear-gradient($color_from, $color_from, $color_from, $color_to);
+  background: linear-gradient($color_from, $color_from, $color_from, $color_to);
+}
