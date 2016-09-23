@@ -3,6 +3,7 @@
   @include blur_image(20px);
 }
 
+
 #blog-details {
   @include default_background;
   padding-bottom: 100px;
@@ -26,7 +27,7 @@
   }
 
   .blog-content {
-    min-height: 100px;
+    min-height: 700px;
 
     .blog-created-time {
       font-family: 'Philosopher', sans-serif;

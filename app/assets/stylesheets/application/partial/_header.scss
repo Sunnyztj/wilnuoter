@@ -3,6 +3,7 @@ header {
   background-color: white;
   position: relative;
   z-index: $header_z_index;
+  border-bottom: 1px solid rgba(128, 128, 128, 0.1);
 
   #main-menu {
     display: inline-block;
