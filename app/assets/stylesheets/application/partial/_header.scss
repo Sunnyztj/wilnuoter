@@ -9,6 +9,7 @@ header {
     display: inline-block;
     width: 100%;
     padding-top: 10px;
+    position: relative;
 
 
     .logo-img {
@@ -24,6 +25,31 @@ header {
     a {
       font-size: 1.2em;
       color: #000;
+    }
+
+    .social-buttons {
+      font-size: 1.5em;
+      color: lightgray;
+      text-align: right;
+      position: absolute;
+      top: 15px;
+      right: 45px;
+
+      .fa-wechat:hover {
+        cursor: pointer;
+        color: darkgray;
+      }
+    }
+
+    .wechat-code {
+      width: 300px;
+      height: 300px;
+      position: absolute;
+      top: 45px;
+      right: 45px;
+      background: image_url('wechat.jpg') no-repeat;
+      background-size: cover;
+      display: none;
     }
   }
 }
