@@ -3,18 +3,18 @@ $(function() {
     var wechatCode = $('.wechat-code');
     wechatIcon.hover(
         function() {
-            wechatCode.fadeIn('slow');
+            wechatCode.fadeIn(200);
         },
         function() {
-            wechatCode.fadeOut('slow');
+            wechatCode.fadeOut(200);
         }
     );
 
     wechatIcon.click(function() {
         if (wechatCode.css('display') == 'none') {
-            wechatCode.fadeIn('slow');
+            wechatCode.fadeIn(200);
         } else {
-            wechatCode.fadeOut('slow');
+            wechatCode.fadeOut(200);
         }
     });
 });
