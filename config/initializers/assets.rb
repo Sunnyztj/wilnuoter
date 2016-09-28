@@ -21,4 +21,4 @@ Rails.application.config.assets.precompile += %w( pages/index.js )
 
 
 Rails.application.config.assets.precompile += %w( utils/highlighter/highlighter.js )
-Rails.application.config.assets.precompile += %w( application/index.css )
+# Rails.application.config.assets.precompile += %w( application/index.css )
