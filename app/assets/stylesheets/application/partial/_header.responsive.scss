@@ -2,6 +2,17 @@
 @media only screen and (min-width : 1200px) {
   header {
     height: 130px;
+
+
+    .social-buttons {
+      text-align: right;
+      top: 15px;
+      right: 45px;
+    }
+
+    .wechat-code {
+      right: 45px;
+    }
   }
 }
 
@@ -9,6 +20,19 @@
 @media only screen and (max-width : 1200px) {
   header {
     height: 130px;
+
+
+    .social-buttons {
+      text-align: right;
+      top: 15px;
+      right: 45px;
+    }
+
+
+
+    .wechat-code {
+      right: 45px;
+    }
   }
 }
 
@@ -60,6 +84,21 @@
             }
           }
         }
+      }
+
+      .fa-bars {
+        font-size: 1.5em;
+        padding-top: 5px;
+      }
+
+      .social-buttons {
+        text-align: left;
+        top: 10px;
+        left: 45px;
+      }
+
+      .wechat-code {
+        left: 45px;
       }
     }
   }

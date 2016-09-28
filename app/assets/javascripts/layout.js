@@ -10,8 +10,11 @@ $(function() {
         }
     );
 
-    wechatIcon.bind('touchstart touchend', function(e) {
-        e.preventDefault();
-        wechatCode.fadeIn('slow');
+    wechatIcon.click(function() {
+        if (wechatCode.css('display') == 'none') {
+            wechatCode.fadeIn('slow');
+        } else {
+            wechatCode.fadeOut('slow');
+        }
     });
 });
