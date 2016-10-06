@@ -1,100 +1,74 @@
-.about-us-welcome {
-  position: relative;
-  z-index: 100;
-  background-color: $white !important;
+#contact-us-cta {
+  height: 300px;
+  background: image_url('contact-us-cta.png') no-repeat;
+  background-size: cover;
 
-  .hr-image-wrapper {
-    background-color: $white !important;
+  p {
+    line-height: 250px;
+    font-size: 6vw;
+    text-align: center;
   }
 }
 
+#wine-making {
+  height: auto;
+  background-color: white;
 
-$member_width: 270px;
-$member_thumbnail_height: 356px;
-
-#our-team {
-  @include default_background;
-  padding-top: 50px;
-
-  .our-team-header-logo {
-    color: $logo_color;
-    font-size: 2.5em;
-    letter-spacing: 3px;
+  .grapes-img {
+    min-height: 300px;
+    background: image_url('grapes.png') no-repeat;
+    background-size: cover;
   }
 
-  .our-team-header {
-    font-size: 2.5em;
-  }
+  .wine-making-intro {
+    background-color: white;
+    padding: 30px;
 
-  #our-team-split-wrapper {
-    height: $split_wrapper_height;
-    line-height: $split_wrapper_height;
-    margin-top: 35px;
-
-    .hr-image-wrapper {
-      width: 100px;
-      height: auto;
-      margin: 0 auto;
-      @include default_background;
-      position: relative;
-      z-index: $split_wrapper_z_index;
-    }
-
-    hr {
-      width: 50%;
-      margin: -20px auto 0 auto;
-      border-color: $home_page_welcome_split_hr_color;
-      position: relative;
-      z-index: $split_hr_z_index;
+    p {
+      padding-top: 10px;
+      font-size: 1.1em;
+      line-height: 30px;
     }
   }
+}
 
-  .list {
-    #member-list {
-      margin-top: 30px;
+#production-line {
+  height: auto;
+  background-color: white;
 
-      .staff {
-        width: $member_width;
-        margin: 50px auto 0 auto;
+  .production-line-img {
+    min-height: 300px;
+    background: image_url('production-line.png') no-repeat;
+    background-size: cover;
+  }
 
-        .img-thumbnail {
-          width: 100%;
-          height: $member_thumbnail_height;
-        }
+  .production-line-intro {
+    background-color: white;
+    padding: 30px;
 
-        .member-info {
-          padding: 15px 30px 0 30px;
-          font-family: 'Philosopher', sans-serif;
-          @include inner_border;
-
-          .member-name {
-            font-size: 1.6em;
-          }
-
-          hr {
-            margin-top: 5px;
-            margin-bottom: 10px;
-            width: 30px;
-            border: none;
-            border-top: 2px solid $logo_color;
-          }
-
-          .member-role {
-            color: #898989;
-            font-style: italic;
-            text-transform: uppercase;
-          }
-        }
-      }
+    p {
+      padding-top: 10px;
+      font-size: 1.1em;
+      line-height: 30px;
     }
+  }
+}
 
+#history {
+  min-height: 300px;
+  background: image_url('history.png') no-repeat;
+  background-size: cover;
+  color: white;
+  text-align: center;
+  padding: 30px;
+
+  h1 {
+    font-size: 4em;
   }
 
-  .list-with-pagination {
-    padding-bottom: 50px;
-  }
-
-  .list-without-pagination {
-    padding-bottom: 100px;
+  p {
+    padding-top: 10px;
+    font-size: 1.1em;
+    line-height: 30px;
   }
 }

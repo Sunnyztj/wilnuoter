@@ -1,0 +1,86 @@
+/* Large Devices, Wide Screens */
+@media only screen and (min-width : 1200px) {
+  .wine-making-intro {
+    text-align: right;
+
+    p {
+      padding-left: 30px;
+    }
+  }
+
+  .production-line-intro {
+    text-align: left;
+
+    p {
+      padding-right: 30px;
+    }
+  }
+
+  #wine-making {
+    min-height: 300px;
+  }
+
+  #production-line {
+    min-height: 300px;
+  }
+}
+
+/* Large Devices, Wide Screens */
+@media only screen and (max-width : 1200px) {
+  .wine-making-intro {
+    text-align: right;
+
+    p {
+      padding-left: 30px;
+    }
+  }
+
+  .production-line-intro {
+    text-align: left;
+
+    p {
+      padding-right: 30px;
+    }
+  }
+
+  #wine-making {
+    min-height: 300px;
+  }
+
+  #production-line {
+    min-height: 300px;
+  }
+}
+
+/* Medium Devices, Desktops */
+@media only screen and (max-width : 992px) {
+  #wine-making {
+    min-height: 700px;
+  }
+
+  .wine-making-intro {
+    text-align: center;
+  }
+
+  #production-line {
+    min-height: 700px;
+  }
+
+  .production-line-intro {
+    text-align: center;
+  }
+}
+
+/* Small Devices, Tablets */
+@media only screen and (max-width : 768px) {
+}
+
+/* Extra Small Devices, Phones */
+@media only screen and (max-width : 480px) {
+
+}
+
+/* Custom, iPhone Retina */
+@media only screen and (max-width : 320px) {
+
+}
