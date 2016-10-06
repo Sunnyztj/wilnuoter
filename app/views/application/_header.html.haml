@@ -41,4 +41,6 @@
               = link_to '联系我们', contact_path, {:class => request.env['PATH_INFO'] == contact_path ? 'active' : ''}
       .social-buttons
         %i.fa.fa-wechat
+      .sm-logo.visible-xs
+        %img.logo-img{:src => image_url('logo.png')}
       .wechat-code
