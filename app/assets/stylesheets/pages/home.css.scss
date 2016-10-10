@@ -56,7 +56,6 @@ $learn_more_link_line_height: 25px;
       .carousel-caption {
         left: 10%;
         right: 10%;
-        padding-bottom: 3vh;
       }
     }
   }
@@ -69,11 +68,13 @@ $learn_more_link_line_height: 25px;
       padding: 0;
 
       .cta-header {
+        text-align: center;
         height: $cta_header_height;
         line-height: $cta_header_height;
       }
 
       .cta-main-content {
+        text-align: center;
         letter-spacing: 0;
       }
 
