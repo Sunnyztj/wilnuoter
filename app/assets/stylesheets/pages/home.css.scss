@@ -114,23 +114,25 @@ $learn_more_link_line_height: 25px;
   }
 
   .content {
-    font-size: 1.5em;
+    font-size: 1.3em;
     line-height: 2em;
   }
 }
 
 #video {
-  background: image_url('video_bg.png') no-repeat;
+  background: image_url('video-bg.png') no-repeat;
   background-size: cover;
   text-align: center;
   overflow: hidden;
 
   .video-link {
-    font-size: 2.5em;
+    font-size: 3em;
     border-radius: 5px;
     border: 2px solid white;
     background-color: transparent;
     color: white;
+    text-shadow: 2px 2px rgba(50, 50, 50, 0.5);
+    box-shadow: 2px 2px rgba(50, 50, 50, 0.5);
   }
 
   .video-link:hover {
@@ -169,16 +171,19 @@ $learn_more_link_line_height: 25px;
   }
 
   a {
-    font-size: 2.5em;
-    color: #000;
+    font-size: 3em;
+    color: white;
+    text-shadow: 2px 2px rgba(50, 50, 50, 0.5);
   }
 
   a:visited {
-    color: #000;
+    color: white;
+    text-shadow: 2px 2px rgba(50, 50, 50, 0.5);
   }
 
   a:hover {
-    color: #000;
+    color: white;
+    text-shadow: 2px 2px rgba(50, 50, 50, 0.5);
     cursor: pointer;
     text-decoration: none;
   }

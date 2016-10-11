@@ -6,13 +6,13 @@
       text-align: right;
       left: auto;
       right: 10%;
-      padding-bottom: 7vh;
+      padding-bottom: 20vh;
     }
 
     .carousel-inner {
       .item {
         .carousel-caption {
-          padding-bottom: 3vh;
+          padding-bottom: 27vh;
         }
       }
 
@@ -21,7 +21,7 @@
         //margin-top: 40vh;
 
         .cta-header {
-          font-size: 4em;
+          font-size: 2em;
           letter-spacing: 2px;
         }
 
@@ -34,8 +34,13 @@
 
 
   #introduction {
-    .col-md-9 {
-      padding-left: 50px;
+    .col-md-5 {
+      padding: 0;
+      min-height: 380px;
+
+      .shop-grid {
+        width: 100%;
+      }
     }
   }
 
@@ -57,7 +62,7 @@
     height: 600px;
 
     .video-link {
-      margin-top: 450px;
+      margin-top: 350px;
     }
   }
 
@@ -98,7 +103,7 @@
     .carousel-inner {
       .item {
         .carousel-caption {
-          padding-bottom: 20vh;
+          padding-bottom: 27vh;
         }
       }
 
@@ -120,8 +125,13 @@
 
 
   #introduction {
-    .col-md-9 {
-      padding-left: 50px;
+    .col-md-5 {
+      padding: 0;
+      min-height: 380px;
+
+      .shop-grid {
+        width: 100%;
+      }
     }
   }
 
@@ -145,7 +155,7 @@
     height: 600px;
 
     .video-link {
-      margin-top: 450px;
+      margin-top: 350px;
     }
   }
 
@@ -205,9 +215,7 @@
 
 
   #introduction {
-    .col-md-9 {
-      padding-left: 15px;
-    }
+    text-align: center;
   }
 }
 
