@@ -8,7 +8,7 @@ load "config/recipes/delayed_job"
 
 default_run_options[:pty] = true
 set :application, 'wilnuoter'
-set :repository,  'git@bitbucket.org:tmatttechnologyptyltd/wilnuoterwine-v1.git'
+set :repository,  'git@github.com:Sunnyztj/wilnuoter.git'
 set :scm, :git
 
 set :deploy_to,   '/home/deploy/wilnuoter'
