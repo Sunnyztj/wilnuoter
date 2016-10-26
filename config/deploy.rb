@@ -25,7 +25,7 @@ set :locals_rails_env, "development"
 # set :server_address, "wilnuoterwine.com"
 # server "139.196.35.230", :app, :web, :db, :primary => true
 
-set :server_address, "demo.wilnuoterwine.com.au"
+set :server_address, "wilnuoterwine.com"
 server "139.196.35.230", :app, :web, :db, :primary => true
 
 # if you want to clean up old releases on each deploy uncomment this:
