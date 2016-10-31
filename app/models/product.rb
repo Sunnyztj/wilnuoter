@@ -14,7 +14,7 @@ class Product < ActiveRecord::Base
   scope :drafted, ->{ where(status: 'draft') }
   scope :available, ->{ where(status: %w(public private)) }
 
-  has_attached_file :image, styles: { thumb: "100x100#", small: "270x356#", medium: "x400", large: "x700" }
+  has_attached_file :image, styles: { thumb: "100x100", small: "270x356#", medium: "x400", large: "x700" }
   validates_attachment_content_type :image, content_type: /\Aimage\/.*\Z/
 
   def price
